@@ -72,6 +72,7 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\Backyard - Free\Readme.txt" />
+    <None Include="Assets\Environment tilesets\town_rpg_pack\license.txt" />
     <None Include="Assets\RPG_Pack\Contact_Info.txt" />
     <None Include="Assets\RPG_Pack\Global_Info.txt" />
     <None Include="Assets\crawl-tiles Oct-5-2010\LICENSE.txt" />
