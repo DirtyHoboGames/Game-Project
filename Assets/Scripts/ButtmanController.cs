@@ -25,7 +25,7 @@ namespace Assets.Scripts {
             Map = GameObject.Find("MapController");
             Buttman = GameObject.Find("Buttman");                                       // playable character
 
-            mapButton.onClick.AddListener(() => toggleMap());
+            mapButton.onClick.AddListener(() => toggleMap());                           // Calls a method on mouse click/touch input to hide/show minimap of the current scene
 
         }
 
@@ -46,7 +46,7 @@ namespace Assets.Scripts {
 
         }
 
-        void MovePlayer(string direction) {
+        void MovePlayer(string direction) {                 //Method for moving the player character
 
             if (direction.Equals("up")) {
                 Buttman.transform.Translate(0, 0.02f, 0);
@@ -62,7 +62,7 @@ namespace Assets.Scripts {
             }
         }
 
-        private void toggleMap() {
+        private void toggleMap() {          //Method for showing/hiding minimap of the current scene
 
             if(Map.activeSelf == true) {
 
