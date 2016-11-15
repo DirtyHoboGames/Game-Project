@@ -66,8 +66,9 @@
     <Compile Include="Assets\RPG_Pack\Scripts\Camera16x9.cs" />
     <Compile Include="Assets\RPG_Pack\Scripts\Example_Motion_Attack_Controller.cs" />
     <Compile Include="Assets\RPG_Pack\Scripts\Example_Simple_Enemy_Controller.cs" />
-    <Compile Include="Assets\Scripts\ButtmanController.cs" />
     <Compile Include="Assets\Scripts\ButtonController.cs" />
+    <Compile Include="Assets\Scripts\Fading.cs" />
+    <Compile Include="Assets\Scripts\GameController.cs" />
     <Compile Include="Assets\Scripts\RegularButtons.cs" />
   </ItemGroup>
   <ItemGroup>
