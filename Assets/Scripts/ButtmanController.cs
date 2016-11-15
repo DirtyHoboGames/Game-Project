@@ -1,60 +1,79 @@
 ﻿using UnityEngine;
 using System.Collections;
 using UnityEngine.UI;
+using Assets.Scripts;
+
+namespace Assets.Scripts {
+    public class ButtmanController : MonoBehaviour {
+
+        private ButtonController upButton;
+        private ButtonController downButton;
+        private ButtonController rightButton;
+        private ButtonController leftButton;
+        private GameObject Buttman;
+        private GameObject Map;
+        private Button mapButton;
+
+        void Start() {
+
+            downButton = GameObject.Find("ButtonDown").GetComponent<ButtonController>();        //  Controls
+            upButton = GameObject.Find("ButtonUp").GetComponent<ButtonController>();            //  the
+            rightButton = GameObject.Find("ButtonRight").GetComponent<ButtonController>();      //  players
+            leftButton = GameObject.Find("ButtonLeft").GetComponent<ButtonController>();        //  movement & uses ButtonController class
+
+            mapButton = GameObject.Find("ButtonMap").GetComponent<Button>(); //   hides/shows map image. Uses a button method instead of ButtonController.
+            Map = GameObject.Find("MapController");
+            Buttman = GameObject.Find("Buttman");                                       // playable character
+
+            mapButton.onClick.AddListener(() => toggleMap());
+
+        }
+
+        void Update() {
+            if (upButton.GetPressed()) {
+                MovePlayer("up");
+            }
+            if (downButton.GetPressed()) {
+                MovePlayer("down");
+            }
+            if (rightButton.GetPressed()) {
+                MovePlayer("right");
+            }
+            if (leftButton.GetPressed()) {
+                MovePlayer("left");
+            }
 
 
-public class ButtmanController : MonoBehaviour {
+        }
 
-    private ButtonController upButton;
-    private ButtonController downButton;
-    private ButtonController rightButton;
-    private ButtonController leftButton;
-    private GameObject Buttman;
+        void MovePlayer(string direction) {
 
-    void Start() {
-        downButton = GameObject.Find("ButtonDown").GetComponent<ButtonController>();
-        upButton = GameObject.Find("ButtonUp").GetComponent<ButtonController>();
-        rightButton = GameObject.Find("ButtonRight").GetComponent<ButtonController>();
-        leftButton = GameObject.Find("ButtonLeft").GetComponent<ButtonController>();
-        Buttman = GameObject.Find("Buttman");
+            if (direction.Equals("up")) {
+                Buttman.transform.Translate(0, 0.02f, 0);
+            }
+            if (direction.Equals("down")) {
+                Buttman.transform.Translate(0, -0.02f, 0);
+            }
+            if (direction.Equals("left")) {
+                Buttman.transform.Translate(-0.02f, 0, 0);
+            }
+            if (direction.Equals("right")) {
+                Buttman.transform.Translate(0.02f, 0, 0);
+            }
+        }
 
-        /*downButton.onClick.AddListener(() => MoveBall("down"));
-        upButton.onClick.AddListener(() => MoveBall("up"));
-        rightButton.onClick.AddListener(() => MoveBall("right"));
-        leftButton.onClick.AddListener(() => MoveBall("left"));
-        */
+        private void toggleMap() {
+
+            if(Map.activeSelf == true) {
+
+                Map.SetActive(false);
+
+                } else {
+
+                Map.SetActive(true);
+
+                }
+            }
+
+        }
     }
-
-    void Update() {
-        if (upButton.GetPressed()) {
-            MoveBall("up");
-        }
-        if (downButton.GetPressed()) {
-            MoveBall("down");
-        }
-        if (rightButton.GetPressed()) {
-            MoveBall("right");
-        }
-        if (leftButton.GetPressed()) {
-            MoveBall("left");
-        }
-
-
-    }
-
-    void MoveBall(string direction) {
-
-        if (direction.Equals("up")) {
-            Buttman.transform.Translate(0, 0.02f, 0);
-        }
-        if (direction.Equals("down")) {
-            Buttman.transform.Translate(0, -0.02f, 0);
-        }
-        if (direction.Equals("left")) {
-            Buttman.transform.Translate(-0.02f, 0, 0);
-        }
-        if (direction.Equals("right")) {
-            Buttman.transform.Translate(0.02f, 0, 0);
-        }
-    }
-}
