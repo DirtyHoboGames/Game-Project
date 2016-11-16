@@ -1,14 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using UnityEngine;
+﻿using UnityEngine;
 
 namespace Assets.Scripts {
     class Fading {
 
-        public Texture2D fadeOutTexture;        // Texture will overlay the screen. Can be image or a drawable graphic
-        public float fadeSpeed = 0.8f;         // Fading speed
+        public Texture2D fadeOutTexture = Texture2D.blackTexture;        // Texture will overlay the screen. Can be image or a drawable graphic
+        public float fadeSpeed = 0.2f;         // Fading speed
 
         private int drawDepth = -1000;          // Order in textures draw hierarchy; this will be at the top of the textures, since its the last texture to be rendered
         private float alpha = 1.0f;             //Textures alpha value between 1(fully visible) and 0 (Fully invisible)
@@ -43,11 +39,11 @@ namespace Assets.Scripts {
         }
 
         //OnLevelWasLoaded is called when a level is loaded. It takes loaded level index (int) as a parameter so you can limit the fade in to certain scenes.
-        void OnLevelWasLoaded() {
+        public void OnLevelWasLoaded(int direction) {
 
             //BeginFade() sets now variable alpha = -1 so the scene fades IN
 
-            BeginFade(-1);  
+            BeginFade(direction);  
 
         }
 

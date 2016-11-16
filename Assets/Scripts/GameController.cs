@@ -54,7 +54,7 @@ namespace Assets.Scripts {
 
         }
 
-        void MovePlayer(string direction) {                 //Method for moving the player character
+        public void MovePlayer(string direction) {                 //Method for moving the player character
 
             if (direction.Equals("up")) {
                 Player.transform.Translate(0, 0.02f, 0);
@@ -86,7 +86,7 @@ namespace Assets.Scripts {
             }
         }
 
-        private void toggleInventory() {
+        public void toggleInventory() {
 
             preventUIOverlap();             //Hiding other menus in order to avoid them overlapping
 
@@ -102,7 +102,7 @@ namespace Assets.Scripts {
             }
         }
 
-        private void preventUIOverlap() {           //This method just disables all menus in order to prevent overlapping
+        public void preventUIOverlap() {           //This method just disables all menus in order to prevent overlapping
 
             Bag.SetActive(false);
             Map.SetActive(false);
