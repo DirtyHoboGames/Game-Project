@@ -2,9 +2,17 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using UnityEngine;
+using UnityEngine.UI;
 
 namespace Assets.Scripts {
-    class Player {
+    class Player : MonoBehaviour {
+
+        // Make this game object and all its transform children
+        // survive when loading a new scene.
+        void Awake() {
+            DontDestroyOnLoad(this);
+        }
 
         string playerName;
         int Intelligence;
@@ -12,9 +20,10 @@ namespace Assets.Scripts {
         int Strength;
         int Luck;
 
-        int HoboCoinsCollected;
+        public int HoboCoinsCollected = 0;
 
         int Health;
+
 
         public Player(string playerName, int Int, int Char, int Str, int Lck) {
 
@@ -33,13 +42,13 @@ namespace Assets.Scripts {
 
         public void GetHoboCoin() {
 
-            this.HoboCoinsCollected++;
+            HoboCoinsCollected++;
 
         }
 
         public void ReceiveDamage(int amount) {
 
-            this.Health -= amount; 
+            this.Health -= amount;
 
         }
 
@@ -56,7 +65,10 @@ namespace Assets.Scripts {
             this.Strength = Str;
             this.Luck = Lck;
 
+            }
+
+
+
         }
 
     }
-}
