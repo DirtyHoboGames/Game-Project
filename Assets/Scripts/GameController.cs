@@ -19,6 +19,8 @@ namespace Assets.Scripts {
         // Initialize all the game components necessary to control the player object and inventory, map etc.
         void Start() {
 
+            Player player = new Player("Player", 3, 4, 5, 6);
+
             downButton = GameObject.Find("ButtonDown").GetComponent<ButtonController>();        //  Controls
             upButton = GameObject.Find("ButtonUp").GetComponent<ButtonController>();            //  the
             rightButton = GameObject.Find("ButtonRight").GetComponent<ButtonController>();      //  players
