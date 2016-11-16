@@ -1,4 +1,4 @@
 sceneSetups:
-- path: Assets/Scenes/Dungeon Level.unity
+- path: Assets/Scenes/Bitch's house.unity
   isLoaded: 1
   isActive: 1
