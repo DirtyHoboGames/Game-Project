@@ -40,8 +40,9 @@ namespace Assets.Scripts {
 
             preventUIOverlap();
         }
-
-        void Update() {
+        
+        // Waits for a user input to move the character into appropriate direction.
+        void Update() {     
 
             if (upButton.GetPressed()) {
                 MovePlayer("up");
