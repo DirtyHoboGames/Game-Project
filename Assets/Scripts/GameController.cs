@@ -6,6 +6,7 @@ using Assets.Scripts;
 namespace Assets.Scripts {
     public class GameController : MonoBehaviour {
 
+
         private ButtonController upButton;
         private ButtonController downButton;
         private ButtonController rightButton;
@@ -15,6 +16,7 @@ namespace Assets.Scripts {
         private Button mapButton;
         private Button bagButton;
         private GameObject Bag;
+        private Text HoboCoin;
 
         // Initialize all the game components necessary to control the player object and inventory, map etc.
         void Start() {
@@ -38,8 +40,10 @@ namespace Assets.Scripts {
 
             preventUIOverlap();
         }
+        
+        // Waits for a user input to move the character into appropriate direction.
+        void Update() {     
 
-        void Update() {
             if (upButton.GetPressed()) {
                 MovePlayer("up");
             }
