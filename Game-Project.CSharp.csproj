@@ -69,6 +69,7 @@
     <Compile Include="Assets\Scripts\ButtonController.cs" />
     <Compile Include="Assets\Scripts\ChangeToNextScene.cs" />
     <Compile Include="Assets\Scripts\CoinController.cs" />
+    <Compile Include="Assets\Scripts\DontDestroy.cs" />
     <Compile Include="Assets\Scripts\Fading.cs" />
     <Compile Include="Assets\Scripts\GameController.cs" />
     <Compile Include="Assets\Scripts\Player.cs" />
@@ -79,7 +80,6 @@
     <None Include="Assets\Backyard - Free\Readme.txt" />
     <None Include="Assets\Environment tilesets\town_rpg_pack\license.txt" />
     <None Include="Assets\RPG_Pack\Contact_Info.txt" />
-    <None Include="Assets\RPG_Pack\Global_Info.txt" />
     <None Include="Assets\crawl-tiles Oct-5-2010\LICENSE.txt" />
     <None Include="Assets\crawl-tiles Oct-5-2010\README.txt" />
     <None Include="Assets\crawl-tiles Oct-5-2010\dc-mon\animals\animals.txt" />
