@@ -86,11 +86,13 @@ namespace Assets.Scripts {
             
         }
 
-        void OnTriggerEnter2D(Collider2D colli) {
+      /* void OnTriggerEnter2D(Collider2D colli) {
             if (colli.gameObject.name == "HoboCoin") {
-                GameController.instance.player.CollectHoboCoin();
+
+                GameController.instance.player.CollectHoboCoin(); 
+
             }    
             
-        }
+        }   */
     }
 }

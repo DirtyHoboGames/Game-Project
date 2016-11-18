@@ -32,6 +32,8 @@ namespace Assets.Scripts {
 
             Player player = new Player("Player", 3, 4, 5, 6);
 
+            StatKeeper.setStats(10, 3, 4, 5, 6);
+
             Bag = GameObject.Find("Bag");                                                       // Initializes the Inventory
             mapButton = GameObject.Find("ButtonMap").GetComponent<Button>();                    //   hides/shows map image. Uses a button method instead of ButtonController.
             Map = GameObject.Find("MapController");
@@ -48,12 +50,24 @@ namespace Assets.Scripts {
             bagButton.onClick.AddListener(() => toggleInventory());                             // Calls a toggleInventory method to hide/show player's inventory
 
             preventUIOverlap();
+
+            Debug.Log(player.DisplayStats());
+
         }
+
         
         // Waits for a user input to move the character into appropriate direction.
         void Update() {     
 
         }
+
+        /* public void CollectCoin() {
+
+            Debug.Log("Now trying to use the player instance");
+            player.CollectHoboCoin();
+
+        } */
+
 
         //displays Minimap window on UI
         private void toggleMap() {                  //Method for showing/hiding minimap of the current scene
@@ -63,7 +77,7 @@ namespace Assets.Scripts {
             if (Map.activeSelf == true) {
 
                 Map.SetActive(false);
-
+                statsText.text = StatKeeper.DisplayStats();
             }
             else {
 
@@ -97,7 +111,8 @@ namespace Assets.Scripts {
             if (Stats.activeSelf == false) {
 
                 Stats.SetActive(true);
-                statsText.text = player.DisplayStats();
+                statsText.text = StatKeeper.DisplayStats();
+
 
             } else {
 
@@ -119,8 +134,10 @@ namespace Assets.Scripts {
 
             if (Stats.activeSelf == true) {
                 Stats.SetActive(false);
+
+
+
             }
         }
-
     }
 }

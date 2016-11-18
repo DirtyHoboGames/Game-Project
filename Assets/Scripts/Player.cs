@@ -9,7 +9,7 @@ namespace Assets.Scripts {
     public class Player {
 
 
-        //Stores a player's name and Stats
+        //Stores a player's name, health and Stats
 
         string playerName;
         //private Text allStats;
@@ -21,7 +21,7 @@ namespace Assets.Scripts {
         int Luck;
 
         //Our fabulous collectibles, that are found throughout our vast in-game universe !
-        public int HoboCoinsCollected = 0;
+        //public int HoboCoinsCollected = 0;
 
         //I think you can figure this out on your own
         int Health;
@@ -30,8 +30,6 @@ namespace Assets.Scripts {
         public Player(string playerName, int Int, int Char, int Str, int Lck) {
 
             this.playerName = playerName;
-
-            this.HoboCoinsCollected = 0;
 
             this.Intelligence = Int;
             this.Charisma = Char;
@@ -43,13 +41,13 @@ namespace Assets.Scripts {
         }
 
         //This method adds one collectable into HoboCoinsCollected Integer variable
-        public void CollectHoboCoin() {
+        /* public void CollectHoboCoin() {
 
             Debug.Log("Player found a HoboCoin !");
 
             HoboCoinsCollected++;
 
-        }
+        } */
 
         //This method makes our hero get slapped in the face and deals damage for an appropriate amount
         public void ReceiveDamage(int amount) {
@@ -82,13 +80,17 @@ namespace Assets.Scripts {
         //Collects all of the stats into a string, which is displayed in the stats window on UI
         public string DisplayStats() {
 
-            return
+            int amount = StatKeeper.getCoinAmount();
+            string temp = "" + 
+     
                             "Health   " + this.Health + "\r\n\r\n" +
                             "Strength   " + this.Strength + "\r\n" +
                             "Charisma   " + this.Charisma + "\r\n" +
                             "Intelligence   " + this.Intelligence + "\r\n" +
                             "Luck   " + this.Luck + "\r\n" + 
-                            "HoboCoins found    " + this.HoboCoinsCollected;
+                            "HoboCoins found    " + amount;
+
+            return temp;
 
             }
         }
