@@ -5,11 +5,8 @@ using Assets.Scripts;
 
 namespace Assets.Scripts {
     public class GameController : MonoBehaviour {
-        
-        private ButtonController upButton;
-        private ButtonController downButton;
-        private ButtonController rightButton;
-        private ButtonController leftButton;
+
+        public static GameController instance= null;
         private GameObject Player;
         private GameObject playerStats;
         private GameObject Map;
@@ -20,16 +17,20 @@ namespace Assets.Scripts {
         private GameObject Bag;
         public Player player;
         private Text statsText;
+       
 
         // Initialize all the game components necessary to control the player object and inventory, map etc.
-        void Start() {
+        void Awake() {
+
+            if (instance == null) {
+                instance = this;
+            } else if (instance != this) {
+                Destroy(gameObject);
+            }
+
+            DontDestroyOnLoad(gameObject);
 
             Player player = new Player("Player", 3, 4, 5, 6);
-
-            downButton = GameObject.Find("ButtonDown").GetComponent<ButtonController>();        //  Controls
-            upButton = GameObject.Find("ButtonUp").GetComponent<ButtonController>();            //  the
-            rightButton = GameObject.Find("ButtonRight").GetComponent<ButtonController>();      //  players
-            leftButton = GameObject.Find("ButtonLeft").GetComponent<ButtonController>();        //  movement & uses ButtonController class
 
             Bag = GameObject.Find("Bag");                                                       // Initializes the Inventory
             mapButton = GameObject.Find("ButtonMap").GetComponent<Button>();                    //   hides/shows map image. Uses a button method instead of ButtonController.
@@ -52,36 +53,6 @@ namespace Assets.Scripts {
         // Waits for a user input to move the character into appropriate direction.
         void Update() {     
 
-            if (upButton.GetPressed()) {
-                MovePlayer("up");
-            }
-            if (downButton.GetPressed()) {
-                MovePlayer("down");
-            }
-            if (rightButton.GetPressed()) {
-                MovePlayer("right");
-            }
-            if (leftButton.GetPressed()) {
-                MovePlayer("left");
-            }
-
-
-        }
-
-        public void MovePlayer(string direction) {                 //Method for moving the player character
-
-            if (direction.Equals("up")) {
-                Player.transform.Translate(0, 0.02f, 0);
-            }
-            if (direction.Equals("down")) {
-                Player.transform.Translate(0, -0.02f, 0);
-            }
-            if (direction.Equals("left")) {
-                Player.transform.Translate(-0.02f, 0, 0);
-            }
-            if (direction.Equals("right")) {
-                Player.transform.Translate(0.02f, 0, 0);
-            }
         }
 
         //displays Minimap window on UI
