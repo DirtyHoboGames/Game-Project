@@ -10,7 +10,7 @@ namespace Assets.Scripts {
 
             DestroyObject(this.gameObject);
 
-            GameObject.Find("StatsManager").GetComponent<Player>().GetHoboCoin();
+            //GameObject.Find("StatsManager").GetComponent<Player>().GetHoboCoin();
 
         }
 	}

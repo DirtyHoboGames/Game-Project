@@ -18,6 +18,8 @@ namespace Assets.Scripts {
         private Button statsButton;
         private GameObject Stats;
         private GameObject Bag;
+        public Player player;
+        private Text statsText;
 
         // Initialize all the game components necessary to control the player object and inventory, map etc.
         void Start() {
@@ -35,6 +37,8 @@ namespace Assets.Scripts {
             bagButton = GameObject.Find("ButtonBag").GetComponent<Button>();
             Stats = GameObject.Find("ShowStats");
             statsButton = GameObject.Find("ButtonStats").GetComponent<Button>();
+            statsText = GameObject.Find("Stats").GetComponent<Text>();
+            Debug.Log(player);
 
             Player = GameObject.Find("Player");                                               // playable character
 
@@ -121,8 +125,8 @@ namespace Assets.Scripts {
 
             if (Stats.activeSelf == false) {
 
-                GameObject.Find("StatsManager").GetComponent<Player>().DisplayStats();
                 Stats.SetActive(true);
+                statsText.text = player.DisplayStats();
 
             } else {
 

@@ -6,18 +6,13 @@ using UnityEngine;
 using UnityEngine.UI;
 
 namespace Assets.Scripts {
-    public class Player : MonoBehaviour {
+    public class Player {
 
-        // Make this game object and all its transform children
-        // survive when loading a new scene.
-        void Awake() {
-            DontDestroyOnLoad(this);
-        }
 
         //Stores a player's name and Stats
 
         string playerName;
-        public Text allStats;
+        //private Text allStats;
 
         //Here are the different stats, which are saved as int variables
         int Intelligence;
@@ -48,60 +43,52 @@ namespace Assets.Scripts {
         }
 
         //This method adds one collectable into HoboCoinsCollected Integer variable
-        public void GetHoboCoin(Player player) {
+        public void CollectHoboCoin() {
 
             Debug.Log("Player found a HoboCoin !");
 
             HoboCoinsCollected++;
 
-            DisplayStats(player);
-
         }
 
         //This method makes our hero get slapped in the face and deals damage for an appropriate amount
-        public void ReceiveDamage(Player player, int amount) {
+        public void ReceiveDamage(int amount) {
 
             Debug.Log("An enemy deals damage for " + amount + " points" + "to Player !");
 
             this.Health -= amount;
 
-            DisplayStats();
-
         }
 
         //This method heals our hero back to full health, so he can keep on getting his ass kicked
-        public void HealPlayer(Player player) {
+        public void HealPlayer() {
 
             Debug.Log("Healing Player back to full health");
 
             this.Health = 10;
 
-            DisplayStats(player);
-
         }
 
         //This method sets our hero's Attributes, so he can get his ass kicked in a number of different ways
-        public void SetStats(Player player, int Int, int Char, int Str, int Lck) {
+        public void SetStats(int Int, int Char, int Str, int Lck) {
 
-            player.Intelligence = Int;
-            player.Charisma = Char;
-            player.Strength = Str;
-            player.Luck = Lck;
-
-            DisplayStats(player);
+           this.Intelligence = Int;
+            this.Charisma = Char;
+            this.Strength = Str;
+            this.Luck = Lck;
 
             }
 
         //Collects all of the stats into a string, which is displayed in the stats window on UI
-        public void DisplayStats(Player player) {
+        public string DisplayStats() {
 
-                 allStats.text = 
-                            "Health   " + player.Health + "\r\n\r\n" +
-                            "Strength   " + player.Strength + "\r\n" +
-                            "Charisma   " + player.Charisma + "\r\n" +
-                            "Intelligence   " + player.Intelligence + "\r\n" +
-                            "Luck   " + player.Luck + "\r\n" + 
-                            "HoboCoins found    " + player.HoboCoinsCollected;
+            return
+                            "Health   " + this.Health + "\r\n\r\n" +
+                            "Strength   " + this.Strength + "\r\n" +
+                            "Charisma   " + this.Charisma + "\r\n" +
+                            "Intelligence   " + this.Intelligence + "\r\n" +
+                            "Luck   " + this.Luck + "\r\n" + 
+                            "HoboCoins found    " + this.HoboCoinsCollected;
 
             }
         }
