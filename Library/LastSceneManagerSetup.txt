@@ -1,4 +1,4 @@
 sceneSetups:
-- path: Assets/Scenes/Sleeping Chambers.unity
+- path: Assets/Scenes/city1.unity
   isLoaded: 1
   isActive: 1
