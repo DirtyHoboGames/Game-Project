@@ -28,7 +28,7 @@ namespace Assets.Scripts {
                 Destroy(gameObject);
             }
 
-            DontDestroyOnLoad(gameObject);
+            //DontDestroyOnLoad(gameObject);
 
             Player player = new Player("Player", 3, 4, 5, 6);
 
@@ -72,6 +72,7 @@ namespace Assets.Scripts {
         //displays Minimap window on UI
         private void toggleMap() {                  //Method for showing/hiding minimap of the current scene
 
+            Debug.Log("toggle");
             preventUIOverlap();             //Hiding other menus in order to avoid them overlapping
 
             if (Map.activeSelf == true) {

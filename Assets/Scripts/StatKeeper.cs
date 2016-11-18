@@ -4,6 +4,7 @@ using System.Collections;
 namespace Assets.Scripts {
     public static class StatKeeper {
 
+
         static int Health;
         static int Charisma;
         static int Strength;

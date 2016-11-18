@@ -32,7 +32,8 @@ namespace Assets.Scripts {
 
         void startGame() {
 
-            SceneManager.LoadScene(2);
+            int currentScene = SceneManager.GetActiveScene().buildIndex;
+            SceneManager.LoadScene(currentScene + 1);
 
         }
 
