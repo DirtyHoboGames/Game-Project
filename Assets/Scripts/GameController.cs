@@ -13,10 +13,16 @@ namespace Assets.Scripts {
         private Button mapButton;
         private Button bagButton;
         private Button statsButton;
+        private Button enterButton;
         private GameObject Stats;
         private GameObject Bag;
+        private GameObject DialogToggle;
         public Player player;
+
         private Text statsText;
+        private Text dialogText;
+
+        private GameObject Interact;
        
 
         // Initialize all the game components necessary to control the player object and inventory, map etc.
@@ -34,6 +40,7 @@ namespace Assets.Scripts {
 
             StatKeeper.setStats(10, 3, 4, 5, 6);
 
+            enterButton = GameObject.Find("ButtonEnter").GetComponent<Button>();
             Bag = GameObject.Find("Bag");                                                       // Initializes the Inventory
             mapButton = GameObject.Find("ButtonMap").GetComponent<Button>();                    //   hides/shows map image. Uses a button method instead of ButtonController.
             Map = GameObject.Find("MapController");
@@ -41,15 +48,20 @@ namespace Assets.Scripts {
             Stats = GameObject.Find("ShowStats");
             statsButton = GameObject.Find("ButtonStats").GetComponent<Button>();
             statsText = GameObject.Find("Stats").GetComponent<Text>();
-            Debug.Log(player);
+            DialogToggle = GameObject.Find("ShowDialog");                                     //This object(ShowDialog) controls the dialog box
+            dialogText = GameObject.Find("ShowDialog").GetComponent<Text>();               //This is the dialog box's text
+            Interact = GameObject.Find("Player/Interact");
 
             Player = GameObject.Find("Player");                                               // playable character
 
             statsButton.onClick.AddListener(() => toggleStats());                               // Calls a method to display stats window on UI
             mapButton.onClick.AddListener(() => toggleMap());                                   // Calls a method on mouse click/touch input to hide/show minimap of the current scene
             bagButton.onClick.AddListener(() => toggleInventory());                             // Calls a toggleInventory method to hide/show player's inventory
+            enterButton.onClick.AddListener(() => searchInteraction());
 
             preventUIOverlap();
+
+            cancelInteracting();
 
             Debug.Log(player.DisplayStats());
 
@@ -61,13 +73,21 @@ namespace Assets.Scripts {
 
         }
 
-        /* public void CollectCoin() {
+        //This allows user to interact with the environment
+        private void searchInteraction() {
 
-            Debug.Log("Now trying to use the player instance");
-            player.CollectHoboCoin();
+            Debug.Log("Player pressed Enter");
 
-        } */
+            Interact.SetActive(true);
+            Invoke("cancelInteracting", 1);     //Waits for 1 second and then turns the interaction trigger off. 
 
+        }
+
+        private void cancelInteracting() {
+
+            Interact.SetActive(false);
+
+        }
 
         //displays Minimap window on UI
         private void toggleMap() {                  //Method for showing/hiding minimap of the current scene
@@ -120,10 +140,10 @@ namespace Assets.Scripts {
                 Stats.SetActive(false);
 
             }
-
         }
 
-        public void preventUIOverlap() {           //This method just disables all menus in order to prevent overlapping
+        //This method just disables all menus in order to prevent overlapping
+        public void preventUIOverlap() {    
 
             if (Bag.activeSelf == true) {
                 Bag.SetActive(false);

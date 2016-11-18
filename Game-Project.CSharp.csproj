@@ -68,6 +68,7 @@
     <Compile Include="Assets\RPG_Pack\Scripts\Example_Simple_Enemy_Controller.cs" />
     <Compile Include="Assets\Scripts\ButtonController.cs" />
     <Compile Include="Assets\Scripts\ChangeToNextScene.cs" />
+    <Compile Include="Assets\Scripts\CheckForInteraction.cs" />
     <Compile Include="Assets\Scripts\CoinController.cs" />
     <Compile Include="Assets\Scripts\CompanyTitle.cs" />
     <Compile Include="Assets\Scripts\DontDestroy.cs" />
