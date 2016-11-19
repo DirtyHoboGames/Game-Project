@@ -56,8 +56,14 @@ namespace Assets.Scripts {
 
         }
 
+        //Returns player's health
+        public static int getHealth() {
+
+            return Health;
+        }
+
         //Collects all of the stats into a string, which is displayed in the stats window on UI
-        public static string DisplayStats() {
+        public static string getStats() {
 
             string temp = "" +
 

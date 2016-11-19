@@ -16,12 +16,6 @@ namespace Assets.Scripts {
 
             StatKeeper.collectHoboCoin();
 
-            Debug.Log(StatKeeper.getCoinAmount());
-
-            ShowStats.SetActive(false);
-            StatKeeper.DisplayStats();
-            ShowStats.SetActive(true);
-
         }
 	}
 }
