@@ -1,4 +1,8 @@
 sceneSetups:
+<<<<<<< HEAD
 - path: Assets/Scenes/First City.unity
+=======
+- path: Assets/Scenes/Dungeon Level.unity
+>>>>>>> 2c43af90574d94baf3eb1432b544ae02e0a8212a
   isLoaded: 1
   isActive: 1
