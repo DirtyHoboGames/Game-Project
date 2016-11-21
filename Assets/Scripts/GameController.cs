@@ -82,7 +82,7 @@ namespace Assets.Scripts {
             menuQuitButton.onClick.AddListener(() => SceneManager.LoadScene(1));                //When you click "Quit to menu" button on the pause menu it returns you to the Title Menu
 
             //ContinueButton.onClick.AddListener(() => ContinueGame());                //Continues game from Wench's House upstairs
-            QuitButton.onClick.AddListener(() => SceneManager.LoadScene(1));                    //Same thing here as in the pause menu^
+            QuitButton.onClick.AddListener(() => quitToMainMenu());                    //Same thing here as in the pause menu^
 
 
             preventUIOverlap();
@@ -94,11 +94,11 @@ namespace Assets.Scripts {
         }
 
         
-        //Updates stats every 10th frame
+        //Updates stats every 20th frame
         void Update() {
 
             frames++;
-            if (frames % 20 == 0) { //If the remainder of the current frame divided by 10 is 0 run the function.
+            if (frames % 20 == 0) { //If the remainder of the current frame divided by 20 is 0 run the function.
                 UpdateStats();
 
                 if(StatKeeper.getHealth() <= 0) {
@@ -140,6 +140,14 @@ namespace Assets.Scripts {
         private void cancelInteracting() {
 
             Interact.SetActive(false);
+
+        }
+
+        //This method quits to main menu and unfreezes time
+        private void quitToMainMenu() {
+
+            Time.timeScale = 1f;
+            SceneManager.LoadScene(1);
 
         }
 
