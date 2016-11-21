@@ -1,6 +1,6 @@
 fileFormatVersion: 2
 guid: 8164d33110dab8340bb5d8f6b513cc73
-timeCreated: 1479589337
+timeCreated: 1479724866
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
@@ -25,9 +25,9 @@ TextureImporter:
     21300036: hyptosis_til-art-batch-2_18
     21300038: hyptosis_til-art-batch-2_19
     21300040: hyptosis_til-art-batch-2_20
-    21300042: hyptosis_til-art-batch-2_21
+    21300042: aaapuu2
     21300044: hyptosis_til-art-batch-2_22
-    21300046: hyptosis_til-art-batch-2_23
+    21300046: aaapuu3
     21300048: hyptosis_til-art-batch-2_24
     21300050: hyptosis_til-art-batch-2_25
     21300052: hyptosis_til-art-batch-2_26
@@ -50,7 +50,7 @@ TextureImporter:
     21300086: hyptosis_til-art-batch-2_43
     21300088: hyptosis_til-art-batch-2_44
     21300090: hyptosis_til-art-batch-2_45
-    21300092: hyptosis_til-art-batch-2_46
+    21300092: aaapuu1
     21300094: hyptosis_til-art-batch-2_47
     21300096: hyptosis_til-art-batch-2_48
     21300098: hyptosis_til-art-batch-2_49
@@ -71,7 +71,7 @@ TextureImporter:
     21300128: hyptosis_til-art-batch-2_64
     21300130: hyptosis_til-art-batch-2_65
     21300132: hyptosis_til-art-batch-2_66
-    21300134: hyptosis_til-art-batch-2_67
+    21300134: aakuollutpuu1
     21300136: hyptosis_til-art-batch-2_68
     21300138: hyptosis_til-art-batch-2_69
     21300140: hyptosis_til-art-batch-2_70
@@ -210,11 +210,11 @@ TextureImporter:
     21300406: hyptosis_til-art-batch-2_203
     21300408: hyptosis_til-art-batch-2_204
     21300410: hyptosis_til-art-batch-2_205
-    21300412: hyptosis_til-art-batch-2_206
+    21300412: aakaatunutpuu2
     21300414: hyptosis_til-art-batch-2_207
     21300416: hyptosis_til-art-batch-2_208
     21300418: hyptosis_til-art-batch-2_209
-    21300420: hyptosis_til-art-batch-2_210
+    21300420: aakaatunutpuu
     21300422: hyptosis_til-art-batch-2_211
     21300424: hyptosis_til-art-batch-2_212
     21300426: hyptosis_til-art-batch-2_213
@@ -426,7 +426,7 @@ TextureImporter:
     21300838: hyptosis_til-art-batch-2_419
     21300840: hyptosis_til-art-batch-2_420
     21300842: hyptosis_til-art-batch-2_421
-    21300844: hyptosis_til-art-batch-2_422
+    21300844: aaakuollutpuu2
     21300846: hyptosis_til-art-batch-2_423
     21300848: hyptosis_til-art-batch-2_424
     21300850: hyptosis_til-art-batch-2_425
@@ -564,7 +564,7 @@ TextureImporter:
     21301114: hyptosis_til-art-batch-2_557
     21301116: hyptosis_til-art-batch-2_558
     21301118: hyptosis_til-art-batch-2_559
-    21301120: hyptosis_til-art-batch-2_560
+    21301120: aapuujuuri
     21301122: hyptosis_til-art-batch-2_561
     21301124: hyptosis_til-art-batch-2_562
     21301126: hyptosis_til-art-batch-2_563
@@ -690,7 +690,7 @@ TextureImporter:
     21301366: hyptosis_til-art-batch-2_683
     21301368: hyptosis_til-art-batch-2_684
     21301370: hyptosis_til-art-batch-2_685
-    21301372: hyptosis_til-art-batch-2_686
+    21301372: aakuollutpuu3
     21301374: hyptosis_til-art-batch-2_687
     21301376: hyptosis_til-art-batch-2_688
     21301378: hyptosis_til-art-batch-2_689
@@ -1100,13 +1100,13 @@ TextureImporter:
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: hyptosis_til-art-batch-2_21
+      name: aaapuu2
       rect:
         serializedVersion: 2
         x: 672
-        y: 928
-        width: 32
-        height: 32
+        y: 800
+        width: 64
+        height: 160
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1126,13 +1126,13 @@ TextureImporter:
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: hyptosis_til-art-batch-2_23
+      name: aaapuu3
       rect:
         serializedVersion: 2
         x: 736
-        y: 928
-        width: 32
-        height: 32
+        y: 860
+        width: 21
+        height: 91
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1425,13 +1425,13 @@ TextureImporter:
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: hyptosis_til-art-batch-2_46
+      name: aaapuu1
       rect:
         serializedVersion: 2
-        x: 640
-        y: 896
-        width: 32
-        height: 32
+        x: 660
+        y: 864
+        width: 12
+        height: 64
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1698,13 +1698,13 @@ TextureImporter:
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: hyptosis_til-art-batch-2_67
+      name: aakuollutpuu1
       rect:
         serializedVersion: 2
         x: 448
-        y: 864
-        width: 32
-        height: 32
+        y: 832
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -3505,13 +3505,13 @@ TextureImporter:
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: hyptosis_til-art-batch-2_206
+      name: aakaatunutpuu2
       rect:
         serializedVersion: 2
         x: 640
-        y: 704
-        width: 32
-        height: 32
+        y: 676
+        width: 102
+        height: 60
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -3557,13 +3557,13 @@ TextureImporter:
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: hyptosis_til-art-batch-2_210
+      name: aakaatunutpuu
       rect:
         serializedVersion: 2
         x: 768
-        y: 704
-        width: 32
-        height: 32
+        y: 662
+        width: 97
+        height: 74
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -6313,13 +6313,13 @@ TextureImporter:
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: hyptosis_til-art-batch-2_422
+      name: aaakuollutpuu2
       rect:
         serializedVersion: 2
         x: 384
-        y: 416
-        width: 32
-        height: 32
+        y: 384
+        width: 65
+        height: 64
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -8107,13 +8107,13 @@ TextureImporter:
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: hyptosis_til-art-batch-2_560
+      name: aapuujuuri
       rect:
         serializedVersion: 2
         x: 640
-        y: 256
-        width: 32
-        height: 32
+        y: 128
+        width: 256
+        height: 160
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -9745,13 +9745,13 @@ TextureImporter:
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: hyptosis_til-art-batch-2_686
+      name: aakuollutpuu3
       rect:
         serializedVersion: 2
         x: 480
-        y: 96
-        width: 32
-        height: 32
+        y: 0
+        width: 160
+        height: 128
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -9853,19 +9853,6 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 736
-        y: 96
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: hyptosis_til-art-batch-2_695
-      rect:
-        serializedVersion: 2
-        x: 768
         y: 96
         width: 32
         height: 32
