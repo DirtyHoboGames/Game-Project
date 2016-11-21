@@ -71,6 +71,7 @@
     <Compile Include="Assets\Scripts\CheckForInteraction.cs" />
     <Compile Include="Assets\Scripts\CoinController.cs" />
     <Compile Include="Assets\Scripts\CompanyTitle.cs" />
+    <Compile Include="Assets\Scripts\DialogScript.cs" />
     <Compile Include="Assets\Scripts\DisplayDialog.cs" />
     <Compile Include="Assets\Scripts\DontDestroy.cs" />
     <Compile Include="Assets\Scripts\Fading.cs" />
