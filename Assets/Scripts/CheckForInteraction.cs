@@ -7,6 +7,8 @@ using Assets;
 namespace Assets.Scripts {
     public class CheckForInteraction : MonoBehaviour {
 
+        private bool inConversation;
+
         private Text dialog;
 
         private GameObject paskavittu;
@@ -27,8 +29,8 @@ namespace Assets.Scripts {
 
             if (colli.CompareTag("NPC")) {
 
-                dialog.text = DialogScript.getDialog(1);
-
+                dialog.text = DialogScript.getDialog(int.Parse(colli.gameObject.name));
+                
             }
 
             else if (colli.CompareTag("HiddenHoboCoin") == true) {

@@ -22,7 +22,10 @@ namespace Assets.Scripts
             //other kid 4
             dialogs.Add("Doth not disturb me");
 
-            //father(s) 5-jotain
+            //Computer??!!!??! 5
+            dialogs.Add("No mitä vittua ? ekkö oo \r\n enne nähny puhuvaa konetta ?");
+
+            //father(s) 6-jotain
             dialogs.Add("");
 
         }
