@@ -1,40 +1,41 @@
 ﻿using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
+using Assets.Scripts;
+using UnityEngine.UI;
 
-public class DialogScript : MonoBehaviour {
+namespace Assets.Scripts {
+    public class DialogScript : MonoBehaviour {
+        public Text DialogBox;
 
-    Dictionary<string, string> dialogs =  new Dictionary<string,string >();
+        public static List<string> dialogs = new List<string>();
+
+        void Start() {
 
 
-    void Start () {
-        //mlady
-        dialogs.Add("mlady1", "I haven't seen thee hither ere. Mine own name is m'lady. What is thy nameth?");
-        dialogs.Add("mlady2", "Typeth thy nameth");
-        dialogs.Add("mlady3", "Nice to meeteth thee x. I am new at this nurs'ry and t is at each moment nice to meeteth new people. ");
+            DialogBox = GameObject.Find("DialogBox").GetComponent<Text>();
 
-        //rival
-        dialogs.Add("rival1", "At which hour thee heareth the bell, cometh apace. The bitter cold drizzle shall halt the bond driveth.");
-        
-        //other kid
-        dialogs.Add("kid", "Doth not disturb me");
 
-        //father(s)
-        dialogs.Add("", "");
-    }
-	
-	// Update is called once per frame
-	void Update () {
-	
-	}
+            //mlady
+            dialogs.Add("I haven't seen thee hither ere. Mine own name is m'lady. What is thy nameth?");
+            dialogs.Add("Typeth thy nameth");
+            dialogs.Add("Nice to meeteth thee x. I am new at this nurs'ry and t is at each moment nice to meeteth new people. ");
 
-    public string CheckDialog(string key) {
-        string temp = "";
-        if (dialogs.ContainsKey(key)){
-            temp = dialogs[key];
-        } else {
-            temp = "null";
+            //rival
+            // dialogs.Add("At which hour thee heareth the bell, cometh apace. The bitter cold drizzle shall halt the bond driveth.");
+
+            //other kid
+            //dialogs.Add("Doth not disturb me");
+
+            //father(s)
+            //dialogs.Add("");
         }
-        return temp;
+
+
+        public static string CheckDialog(int Index) {
+            string temp = dialogs[Index];
+
+            return temp;
+        }
     }
 }
