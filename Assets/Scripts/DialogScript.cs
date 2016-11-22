@@ -1,41 +1,42 @@
-﻿using UnityEngine;
-using System.Collections;
+﻿
 using System.Collections.Generic;
-using Assets.Scripts;
-using UnityEngine.UI;
 
-namespace Assets.Scripts {
-    public class DialogScript : MonoBehaviour {
-        public Text DialogBox;
+namespace Assets.Scripts
+{
+    public class DialogScript {
 
-        public static List<string> dialogs = new List<string>();
+        private static List<string> dialogs = new List<string>();
+        
 
-        void Start() {
-
-
-            DialogBox = GameObject.Find("DialogBox").GetComponent<Text>();
+        public static void DialogInit() {
 
 
-            //mlady
-            dialogs.Add("I haven't seen thee hither ere. Mine own name is m'lady. What is thy nameth?");
-            dialogs.Add("Typeth thy nameth");
-            dialogs.Add("Nice to meeteth thee x. I am new at this nurs'ry and t is at each moment nice to meeteth new people. ");
+            //M' Lady 0-2
+            dialogs.Add("M' Lady \r\n   I haven't seen thee hither ere. What is thy nameth?");
+            dialogs.Add("M' Lady \r\n   Typeth thy nameth");
+            dialogs.Add("M' Lady \r\n   Nice to meeteth thee x. I am new at this nurs'ry and t is at each moment nice to meeteth new people. ");
+            
+            //rival 3
+            dialogs.Add("At which hour thee heareth the bell, cometh apace. The bitter cold drizzle shall halt the bond driveth.");
 
-            //rival
-            // dialogs.Add("At which hour thee heareth the bell, cometh apace. The bitter cold drizzle shall halt the bond driveth.");
+            //other kid 4
+            dialogs.Add("Doth not disturb me");
 
-            //other kid
-            //dialogs.Add("Doth not disturb me");
+            //father(s) 5-jotain
+            dialogs.Add("");
 
-            //father(s)
-            //dialogs.Add("");
         }
 
+        public static string getDialog (int lel) {
 
-        public static string CheckDialog(int Index) {
-            string temp = dialogs[Index];
+            if(dialogs.Count > lel) {
+            return dialogs[lel];
 
-            return temp;
+        } else {
+
+            return "not found";
+
         }
     }
+}
 }

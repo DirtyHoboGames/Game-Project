@@ -7,20 +7,27 @@ using Assets;
 namespace Assets.Scripts {
     public class CheckForInteraction : MonoBehaviour {
 
-        public Text dialog;
+        private Text dialog;
 
+        private GameObject paskavittu;
+
+        public static List<string> dialogs = new List<string>();
 
         void Start() {
+
+            DialogScript.DialogInit();
+
             dialog = GameObject.Find("ShowDialog/DialogBox").GetComponent<Text>();
+
         }
 
         
 
         void OnTriggerEnter2D(Collider2D colli) {
 
-            if (colli.CompareTag("NPC") == true) {
+            if (colli.CompareTag("NPC")) {
 
-                dialog.text = DialogScript.CheckDialog(1);
+                dialog.text = DialogScript.getDialog(1);
 
             }
 
@@ -35,9 +42,6 @@ namespace Assets.Scripts {
                 StatKeeper.receiveDamage(2);
 
             }
-
-
-
         }
     }
 }
