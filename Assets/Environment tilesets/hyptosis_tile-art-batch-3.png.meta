@@ -1,6 +1,6 @@
 fileFormatVersion: 2
 guid: 422e011de8e192246a6d5d0b757dda4c
-timeCreated: 1479728846
+timeCreated: 1480269687
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
@@ -625,9 +625,9 @@ TextureImporter:
     21301236: hyptosis_tile-art-batch-3_618
     21301238: hyptosis_tile-art-batch-3_619
     21301240: hyptosis_tile-art-batch-3_620
-    21301242: hyptosis_tile-art-batch-3_621
-    21301244: hyptosis_tile-art-batch-3_622
-    21301246: hyptosis_tile-art-batch-3_623
+    21301242: 1sokkelo1
+    21301244: 1sokkelo2
+    21301246: 1sokkelo3
     21301248: hyptosis_tile-art-batch-3_624
     21301250: hyptosis_tile-art-batch-3_625
     21301252: hyptosis_tile-art-batch-3_626
@@ -648,9 +648,9 @@ TextureImporter:
     21301282: hyptosis_tile-art-batch-3_641
     21301284: hyptosis_tile-art-batch-3_642
     21301286: hyptosis_tile-art-batch-3_643
-    21301288: hyptosis_tile-art-batch-3_644
-    21301290: hyptosis_tile-art-batch-3_645
-    21301292: hyptosis_tile-art-batch-3_646
+    21301288: 1sokkelo4
+    21301290: 1sokkelo5
+    21301292: 1sokkelo6
     21301294: hyptosis_tile-art-batch-3_647
     21301296: hyptosis_tile-art-batch-3_648
     21301298: hyptosis_tile-art-batch-3_649
@@ -671,9 +671,9 @@ TextureImporter:
     21301328: hyptosis_tile-art-batch-3_664
     21301330: hyptosis_tile-art-batch-3_665
     21301332: hyptosis_tile-art-batch-3_666
-    21301334: hyptosis_tile-art-batch-3_667
-    21301336: hyptosis_tile-art-batch-3_668
-    21301338: hyptosis_tile-art-batch-3_669
+    21301334: 1sokkelo7
+    21301336: 1sokkelo8
+    21301338: 1sokkelo9
     21301340: hyptosis_tile-art-batch-3_670
     21301342: hyptosis_tile-art-batch-3_671
     21301344: hyptosis_tile-art-batch-3_672
@@ -8825,7 +8825,7 @@ TextureImporter:
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: hyptosis_tile-art-batch-3_621
+      name: 1sokkelo1
       rect:
         serializedVersion: 2
         x: 384
@@ -8838,7 +8838,7 @@ TextureImporter:
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: hyptosis_tile-art-batch-3_622
+      name: 1sokkelo2
       rect:
         serializedVersion: 2
         x: 416
@@ -8851,7 +8851,7 @@ TextureImporter:
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: hyptosis_tile-art-batch-3_623
+      name: 1sokkelo3
       rect:
         serializedVersion: 2
         x: 448
@@ -9124,7 +9124,7 @@ TextureImporter:
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: hyptosis_tile-art-batch-3_644
+      name: 1sokkelo4
       rect:
         serializedVersion: 2
         x: 384
@@ -9137,7 +9137,7 @@ TextureImporter:
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: hyptosis_tile-art-batch-3_645
+      name: 1sokkelo5
       rect:
         serializedVersion: 2
         x: 416
@@ -9150,7 +9150,7 @@ TextureImporter:
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: hyptosis_tile-art-batch-3_646
+      name: 1sokkelo6
       rect:
         serializedVersion: 2
         x: 448
@@ -9423,7 +9423,7 @@ TextureImporter:
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: hyptosis_tile-art-batch-3_667
+      name: 1sokkelo7
       rect:
         serializedVersion: 2
         x: 384
@@ -9436,7 +9436,7 @@ TextureImporter:
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: hyptosis_tile-art-batch-3_668
+      name: 1sokkelo8
       rect:
         serializedVersion: 2
         x: 416
@@ -9449,7 +9449,7 @@ TextureImporter:
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: hyptosis_tile-art-batch-3_669
+      name: 1sokkelo9
       rect:
         serializedVersion: 2
         x: 448

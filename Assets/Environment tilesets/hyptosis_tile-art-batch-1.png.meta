@@ -1,6 +1,6 @@
 fileFormatVersion: 2
 guid: ab2f6e7e2d6317341ad8a8db23dff5c3
-timeCreated: 1479587859
+timeCreated: 1480264046
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
@@ -745,7 +745,7 @@ TextureImporter:
     21301476: hyptosis_tile-art-batch-1_738
     21301478: hyptosis_tile-art-batch-1_739
     21301480: hyptosis_tile-art-batch-1_740
-    21301482: hyptosis_tile-art-batch-1_741
+    21301482: aavinopuu1
     21301484: hyptosis_tile-art-batch-1_742
     21301486: hyptosis_tile-art-batch-1_743
     21301488: hyptosis_tile-art-batch-1_744
@@ -774,7 +774,7 @@ TextureImporter:
     21301534: hyptosis_tile-art-batch-1_767
     21301536: hyptosis_tile-art-batch-1_768
     21301538: hyptosis_tile-art-batch-1_769
-    21301540: hyptosis_tile-art-batch-1_770
+    21301540: aaylapuu
     21301542: hyptosis_tile-art-batch-1_771
     21301544: hyptosis_tile-art-batch-1_772
     21301546: hyptosis_tile-art-batch-1_773
@@ -804,7 +804,7 @@ TextureImporter:
     21301594: hyptosis_tile-art-batch-1_797
     21301596: hyptosis_tile-art-batch-1_798
     21301598: hyptosis_tile-art-batch-1_799
-    21301600: hyptosis_tile-art-batch-1_800
+    21301600: aapieniylapuu
     21301602: hyptosis_tile-art-batch-1_801
     21301604: hyptosis_tile-art-batch-1_802
     21301606: hyptosis_tile-art-batch-1_803
@@ -826,7 +826,7 @@ TextureImporter:
     21301638: hyptosis_tile-art-batch-1_819
     21301640: hyptosis_tile-art-batch-1_820
     21301642: hyptosis_tile-art-batch-1_821
-    21301644: hyptosis_tile-art-batch-1_822
+    21301644: aavinopuu2
     21301646: hyptosis_tile-art-batch-1_823
     21301648: hyptosis_tile-art-batch-1_824
     21301650: hyptosis_tile-art-batch-1_825
@@ -10516,13 +10516,13 @@ TextureImporter:
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: hyptosis_tile-art-batch-1_741
+      name: aavinopuu1
       rect:
         serializedVersion: 2
         x: 640
-        y: 96
-        width: 32
-        height: 32
+        y: 32
+        width: 95
+        height: 96
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -10893,13 +10893,13 @@ TextureImporter:
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: hyptosis_tile-art-batch-1_770
+      name: aaylapuu
       rect:
         serializedVersion: 2
-        x: 736
-        y: 64
-        width: 32
-        height: 32
+        x: 741
+        y: 0
+        width: 89
+        height: 90
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -11283,13 +11283,13 @@ TextureImporter:
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: hyptosis_tile-art-batch-1_800
+      name: aapieniylapuu
       rect:
         serializedVersion: 2
-        x: 832
-        y: 32
-        width: 32
-        height: 32
+        x: 843
+        y: 0
+        width: 53
+        height: 64
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -11569,12 +11569,12 @@ TextureImporter:
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: hyptosis_tile-art-batch-1_822
+      name: aavinopuu2
       rect:
         serializedVersion: 2
         x: 640
         y: 0
-        width: 32
+        width: 64
         height: 32
       alignment: 0
       pivot: {x: 0.5, y: 0.5}

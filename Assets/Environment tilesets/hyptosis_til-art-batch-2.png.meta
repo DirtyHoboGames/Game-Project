@@ -1,6 +1,6 @@
 fileFormatVersion: 2
 guid: 8164d33110dab8340bb5d8f6b513cc73
-timeCreated: 1479761445
+timeCreated: 1480267510
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
@@ -250,8 +250,8 @@ TextureImporter:
     21300486: hyptosis_til-art-batch-2_243
     21300488: hyptosis_til-art-batch-2_244
     21300490: hyptosis_til-art-batch-2_245
-    21300492: hyptosis_til-art-batch-2_246
-    21300494: hyptosis_til-art-batch-2_247
+    21300492: aapitkakivi
+    21300494: aapienikivi
     21300496: hyptosis_til-art-batch-2_248
     21300498: hyptosis_til-art-batch-2_249
     21300500: hyptosis_til-art-batch-2_250
@@ -275,7 +275,7 @@ TextureImporter:
     21300536: hyptosis_til-art-batch-2_268
     21300538: hyptosis_til-art-batch-2_269
     21300540: hyptosis_til-art-batch-2_270
-    21300542: hyptosis_til-art-batch-2_271
+    21300542: aapienetkivet
     21300544: hyptosis_til-art-batch-2_272
     21300546: hyptosis_til-art-batch-2_273
     21300548: hyptosis_til-art-batch-2_274
@@ -289,17 +289,17 @@ TextureImporter:
     21300564: aapuurunko
     21300566: hyptosis_til-art-batch-2_283
     21300568: hyptosis_til-art-batch-2_284
-    21300570: hyptosis_til-art-batch-2_285
-    21300572: hyptosis_til-art-batch-2_286
-    21300574: hyptosis_til-art-batch-2_287
-    21300576: hyptosis_til-art-batch-2_288
+    21300570: aatree4
+    21300572: aatree3
+    21300574: aatree2
+    21300576: aatree1
     21300578: hyptosis_til-art-batch-2_289
     21300580: hyptosis_til-art-batch-2_290
     21300582: hyptosis_til-art-batch-2_291
     21300584: hyptosis_til-art-batch-2_292
     21300586: hyptosis_til-art-batch-2_293
     21300588: hyptosis_til-art-batch-2_294
-    21300590: hyptosis_til-art-batch-2_295
+    21300590: aaisokivi
     21300592: hyptosis_til-art-batch-2_296
     21300594: hyptosis_til-art-batch-2_297
     21300596: hyptosis_til-art-batch-2_298
@@ -4025,20 +4025,20 @@ TextureImporter:
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: hyptosis_til-art-batch-2_246
+      name: aapitkakivi
       rect:
         serializedVersion: 2
-        x: 160
-        y: 640
-        width: 32
-        height: 32
+        x: 161
+        y: 609
+        width: 31
+        height: 63
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: hyptosis_til-art-batch-2_247
+      name: aapienikivi
       rect:
         serializedVersion: 2
         x: 192
@@ -4350,7 +4350,7 @@ TextureImporter:
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: hyptosis_til-art-batch-2_271
+      name: aapienetkivet
       rect:
         serializedVersion: 2
         x: 192
@@ -4532,52 +4532,52 @@ TextureImporter:
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: hyptosis_til-art-batch-2_285
+      name: aatree4
       rect:
         serializedVersion: 2
         x: 768
-        y: 608
-        width: 32
-        height: 32
+        y: 576
+        width: 38
+        height: 64
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: hyptosis_til-art-batch-2_286
+      name: aatree3
       rect:
         serializedVersion: 2
-        x: 800
-        y: 608
-        width: 32
-        height: 32
+        x: 806
+        y: 578
+        width: 26
+        height: 62
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: hyptosis_til-art-batch-2_287
+      name: aatree2
       rect:
         serializedVersion: 2
         x: 832
-        y: 608
-        width: 32
-        height: 32
+        y: 576
+        width: 38
+        height: 64
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: hyptosis_til-art-batch-2_288
+      name: aatree1
       rect:
         serializedVersion: 2
-        x: 864
-        y: 608
-        width: 32
-        height: 32
+        x: 870
+        y: 576
+        width: 26
+        height: 64
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -4662,13 +4662,13 @@ TextureImporter:
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: hyptosis_til-art-batch-2_295
+      name: aaisokivi
       rect:
         serializedVersion: 2
-        x: 192
-        y: 576
-        width: 32
-        height: 32
+        x: 194
+        y: 544
+        width: 61
+        height: 60
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
