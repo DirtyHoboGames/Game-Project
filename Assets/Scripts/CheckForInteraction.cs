@@ -42,7 +42,6 @@ namespace Assets.Scripts {
 
 				//Finds the objects and assings the correct methods if you click the buttons
 				YellowKnightToggle = GameObject.Find ("YellowKnightToggle");
-				Debug.Log("GameObject found !");
 				YellowYes = GameObject.Find ("YellowKnightToggle/YesButton").GetComponent<Button> ();
 				YellowNo = GameObject.Find ("YellowKnightToggle/NoButton").GetComponent<Button> ();
 
@@ -161,8 +160,6 @@ namespace Assets.Scripts {
 			}
 
 			void toggleFathers() {
-
-			Debug.Log("asd");
 			
 				if(YellowKnightToggle.activeSelf == true) {
 

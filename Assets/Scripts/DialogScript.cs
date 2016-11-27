@@ -22,13 +22,13 @@ namespace Assets.Scripts
             //other kid 4
             dialogs.Add("Doth not disturb me");
 
-            //Wench 5-6
+            //Wench 5-7
             dialogs.Add("Wench \r\n   Ah, hath found thee sneaky piece of garbage.");
             dialogs.Add("Wench \r\n   Oh? sweet roses.i'll alloweth t slideth.");
             dialogs.Add("Wench \r\n   Geth lost garbage or thy will faceth certain death!");
 
-            //father(s) 
-            dialogs.Add("");
+            //M' Lady 8
+			dialogs.Add("Holla th're !");
 
         }
 

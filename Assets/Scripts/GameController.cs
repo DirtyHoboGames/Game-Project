@@ -18,6 +18,7 @@ namespace Assets.Scripts {
         private Button bagButton;
         private Button statsButton;
         private Button enterButton;
+		private Button hideStoryWindow;
 
 		//These objects show when you click "Menu" button
         private Button menuPlayButton;
@@ -30,21 +31,7 @@ namespace Assets.Scripts {
         private GameObject DialogToggle;
         private GameObject Menu;
         private GameObject GameOver;
-
-		/*//These objects show if you press Enter near the Yellow Knight
-		private GameObject YellowKnightToggle;
-		private Button YellowNo;
-		private Button YellowYes;
-
-		//These objects show if you press Enter near the Blue Knight
-		private GameObject BlueKnightToggle;
-		private Button BlueYes;
-		private Button BlueNo;
-
-		//These objects show if you press Enter near the Bloody Knight
-		private GameObject BloodyKnightToggle;
-		private Button BloodyYes;
-		private Button BloodyNo; */
+		private GameObject StoryWindow;
 
         private int frames = 0;
 
@@ -68,6 +55,7 @@ namespace Assets.Scripts {
 
             //Player player = new Player("Player", 3, 4, 5, 6);
 
+			//Finds all of the UI Buttons and GameObjects and a story window button which is at the beginning of scenes
             enterButton = GameObject.Find("ButtonEnter").GetComponent<Button>();
             Bag = GameObject.Find("Bag");                                                                           // Initializes the Inventory
             mapButton = GameObject.Find("ButtonMap").GetComponent<Button>();                                        //   hides/shows map image. Uses a button method instead of ButtonController.
@@ -83,22 +71,16 @@ namespace Assets.Scripts {
             menuPlayButton = GameObject.Find("ShowMenu/ResumeButton").GetComponent<Button>();
             menuQuitButton = GameObject.Find("ShowMenu/QuitButton").GetComponent<Button>();               
             Menu = GameObject.Find("ShowMenu");                                                                 //this object toggles the pause menu
-            //ContinueButton = GameObject.Find("GameOverScreen/ContinueButton").GetComponent<Button>();
             QuitButton = GameObject.Find("GameOverScreen/QuitButton").GetComponent<Button>();
             GameOver = GameObject.Find("GameOverScreen");
 
-			/*//Finds the objects and assings the correct methods if you click the buttons
-			YellowKnightToggle = GameObject.Find ("YellowKnightToggle");
-			YellowYes = GameObject.Find ("YellowKnightToggle/YesButton").GetComponent<Button> ();
-			YellowNo = GameObject.Find ("YellowKnightToggle/NoButton").GetComponent<Button> ();
 
-			BlueKnightToggle = GameObject.Find ("BlueKnightToggle");
-			BlueYes = GameObject.Find ("BlueKnightToggle/YesButton").GetComponent<Button> ();
-			BlueNo = GameObject.Find ("BlueKnightToggle/NoButton").GetComponent<Button> ();
+			if (SceneManager.GetActiveScene ().name.Equals ("Childhood room 1")) {
+				StoryWindow = GameObject.Find ("StoryWindow");
+				hideStoryWindow = GameObject.Find ("StoryWindow/ContinueButton").GetComponent<Button> ();
 
-			BloodyKnightToggle = GameObject.Find ("BloodyKnightToggle");
-			BloodyYes = GameObject.Find ("BloodyKnightToggle/YesButton").GetComponent<Button> ();
-			BloodyNo = GameObject.Find ("BloodyKnightToggle/NoButton").GetComponent<Button> (); */
+				hideStoryWindow.onClick.AddListener (() => hideStory ());
+			}
 
 
             Player = GameObject.Find("Player");                                                                  // playable character
@@ -110,8 +92,6 @@ namespace Assets.Scripts {
             menuButton.onClick.AddListener(() => toggleMenu());
             menuPlayButton.onClick.AddListener(() => resumeGame());
             menuQuitButton.onClick.AddListener(() => SceneManager.LoadScene(1));                //When you click "Quit to menu" button on the pause menu it returns you to the Title Menu
-
-
 
             //ContinueButton.onClick.AddListener(() => ContinueGame());                //Continues game from Wench's House upstairs
             QuitButton.onClick.AddListener(() => quitToMainMenu());                    //Same thing here as in the pause menu^
@@ -145,6 +125,13 @@ namespace Assets.Scripts {
             }
 
         }
+
+		//Hides the story window and continues the game
+		void hideStory() {
+
+			StoryWindow.SetActive (false);
+
+		}
 
         //Continues the game and revives the player
         private void ContinueGame() {
@@ -296,25 +283,6 @@ namespace Assets.Scripts {
                 GameOver.SetActive(false);
 
                 }
-
-			/* if(YellowKnightToggle.activeSelf == true) {
-
-				YellowKnightToggle.SetActive(false);
-
-				}
-
-			if(BloodyKnightToggle.activeSelf == true) {
-
-				BloodyKnightToggle.SetActive(false);
-
-				}
-
-			if(BlueKnightToggle.activeSelf == true) {
-
-				BlueKnightToggle.SetActive(false);
-
-				} */
-
             }
         }
     }
