@@ -22,10 +22,12 @@ namespace Assets.Scripts
             //other kid 4
             dialogs.Add("Doth not disturb me");
 
-            //Computer??!!!??! 5
-            dialogs.Add("No mitä vittua ? ekkö oo \r\n enne nähny puhuvaa konetta ?");
+            //Wench 5-6
+            dialogs.Add("Wench \r\n   Ah, hath found thee sneaky piece of garbage.");
+            dialogs.Add("Wench \r\n   Oh? sweet roses.i'll alloweth t slideth.");
+            dialogs.Add("Wench \r\n   Geth lost garbage or thy will faceth certain death!");
 
-            //father(s) 6-jotain
+            //father(s) 
             dialogs.Add("");
 
         }

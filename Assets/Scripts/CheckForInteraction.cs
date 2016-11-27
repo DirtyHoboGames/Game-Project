@@ -23,17 +23,16 @@ namespace Assets.Scripts {
 
         }
 
-        
-
-        void OnTriggerEnter2D(Collider2D colli) {
+         void OnTriggerEnter2D(Collider2D colli) {
 
             if (colli.CompareTag("NPC")) {
 
                 dialog.text = DialogScript.getDialog(int.Parse(colli.gameObject.name));
-                
-            }
 
-            else if (colli.CompareTag("HiddenHoboCoin") == true) {
+            /*}else if (colli.CompareTag("Wench")) {
+                dialog.text = DialogScript.getDialog(int.Parse(colli.gameObject.name));
+                */
+            }else if (colli.CompareTag("HiddenHoboCoin") == true) {
 
                 Debug.Log("Oh look, a HoboCoin !");
 
