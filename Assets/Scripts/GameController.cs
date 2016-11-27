@@ -18,15 +18,33 @@ namespace Assets.Scripts {
         private Button bagButton;
         private Button statsButton;
         private Button enterButton;
+
+		//These objects show when you click "Menu" button
         private Button menuPlayButton;
         private Button menuQuitButton;
 
+		//These objects control the UI submenus (minimap, stats, inventory and dialog)
         private GameObject Map;
         private GameObject Stats;
         private GameObject Bag;
         private GameObject DialogToggle;
         private GameObject Menu;
         private GameObject GameOver;
+
+		/*//These objects show if you press Enter near the Yellow Knight
+		private GameObject YellowKnightToggle;
+		private Button YellowNo;
+		private Button YellowYes;
+
+		//These objects show if you press Enter near the Blue Knight
+		private GameObject BlueKnightToggle;
+		private Button BlueYes;
+		private Button BlueNo;
+
+		//These objects show if you press Enter near the Bloody Knight
+		private GameObject BloodyKnightToggle;
+		private Button BloodyYes;
+		private Button BloodyNo; */
 
         private int frames = 0;
 
@@ -48,9 +66,7 @@ namespace Assets.Scripts {
 
             //DontDestroyOnLoad(gameObject);
 
-            Player player = new Player("Player", 3, 4, 5, 6);
-
-            StatKeeper.setStats(10, 3, 4, 5, 6);
+            //Player player = new Player("Player", 3, 4, 5, 6);
 
             enterButton = GameObject.Find("ButtonEnter").GetComponent<Button>();
             Bag = GameObject.Find("Bag");                                                                           // Initializes the Inventory
@@ -71,6 +87,20 @@ namespace Assets.Scripts {
             QuitButton = GameObject.Find("GameOverScreen/QuitButton").GetComponent<Button>();
             GameOver = GameObject.Find("GameOverScreen");
 
+			/*//Finds the objects and assings the correct methods if you click the buttons
+			YellowKnightToggle = GameObject.Find ("YellowKnightToggle");
+			YellowYes = GameObject.Find ("YellowKnightToggle/YesButton").GetComponent<Button> ();
+			YellowNo = GameObject.Find ("YellowKnightToggle/NoButton").GetComponent<Button> ();
+
+			BlueKnightToggle = GameObject.Find ("BlueKnightToggle");
+			BlueYes = GameObject.Find ("BlueKnightToggle/YesButton").GetComponent<Button> ();
+			BlueNo = GameObject.Find ("BlueKnightToggle/NoButton").GetComponent<Button> ();
+
+			BloodyKnightToggle = GameObject.Find ("BloodyKnightToggle");
+			BloodyYes = GameObject.Find ("BloodyKnightToggle/YesButton").GetComponent<Button> ();
+			BloodyNo = GameObject.Find ("BloodyKnightToggle/NoButton").GetComponent<Button> (); */
+
+
             Player = GameObject.Find("Player");                                                                  // playable character
 
             statsButton.onClick.AddListener(() => toggleStats());                                               // Calls a method to display stats window on UI
@@ -81,6 +111,8 @@ namespace Assets.Scripts {
             menuPlayButton.onClick.AddListener(() => resumeGame());
             menuQuitButton.onClick.AddListener(() => SceneManager.LoadScene(1));                //When you click "Quit to menu" button on the pause menu it returns you to the Title Menu
 
+
+
             //ContinueButton.onClick.AddListener(() => ContinueGame());                //Continues game from Wench's House upstairs
             QuitButton.onClick.AddListener(() => quitToMainMenu());                    //Same thing here as in the pause menu^
 
@@ -88,8 +120,6 @@ namespace Assets.Scripts {
             preventUIOverlap();
 
             cancelInteracting();
-
-            Debug.Log(player.DisplayStats());
 
         }
 
@@ -266,6 +296,25 @@ namespace Assets.Scripts {
                 GameOver.SetActive(false);
 
                 }
+
+			/* if(YellowKnightToggle.activeSelf == true) {
+
+				YellowKnightToggle.SetActive(false);
+
+				}
+
+			if(BloodyKnightToggle.activeSelf == true) {
+
+				BloodyKnightToggle.SetActive(false);
+
+				}
+
+			if(BlueKnightToggle.activeSelf == true) {
+
+				BlueKnightToggle.SetActive(false);
+
+				} */
+
             }
         }
     }
