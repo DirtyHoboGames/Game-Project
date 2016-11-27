@@ -35,6 +35,7 @@ namespace Assets.Scripts {
             DialogScript.DialogInit();
 
             dialog = GameObject.Find("ShowDialog/DialogBox").GetComponent<Text>();
+            
 
 			if (SceneManager.GetActiveScene().name.Equals ("Childhood room 1")) {
 

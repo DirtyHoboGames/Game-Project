@@ -106,7 +106,10 @@ namespace Assets.Scripts {
         
         //Updates stats every 20th frame
         void Update() {
-
+            //DELETE BEFORE RELEASE!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!1
+            if (StatKeeper.getHealth() <= 0) {//888888888888888888888888888888888888888888888888888888888888888888888888888
+                StatKeeper.healPlayer();//!111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111
+            }//!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
             frames++;
             if (frames % 20 == 0) { //If the remainder of the current frame divided by 20 is 0 run the function.
                 UpdateStats();

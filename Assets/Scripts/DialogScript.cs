@@ -30,6 +30,23 @@ namespace Assets.Scripts
             //M' Lady 8
 			dialogs.Add("Holla th're !");
 
+            //guard(s) 9 - infinitii
+            dialogs.Add("Guard: \r\n	I hath used to beest an adventur'r liketh thee, but then i tooketh an arrow to the ham. ");
+            dialogs.Add("Guard: \r\n	Grise aside, citizen");
+        
+            dialogs.Add("Guard: \r\n	Greetings, travell’r");
+        
+            dialogs.Add("Guard: \r\n	Receiveth hath lost, dog. ");
+        
+            dialogs.Add("Guard: \r\n	If 't be true i seeth thee again i shall murd'r thee in thy catch but a wink. ");
+        
+            dialogs.Add("Guard: \r\n	Eat thee dirt");
+        
+            dialogs.Add("Guard: \r\n	A n'rmal day h're isn't t citizen?");
+        
+            dialogs.Add("Guard: \r\n	I did see a frog this m'rning and t wast fabulous. ");
+
+
         }
 
         public static string getDialog (int lel) {
