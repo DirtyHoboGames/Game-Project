@@ -18,15 +18,20 @@ namespace Assets.Scripts {
         private Button bagButton;
         private Button statsButton;
         private Button enterButton;
+		private Button hideStoryWindow;
+
+		//These objects show when you click "Menu" button
         private Button menuPlayButton;
         private Button menuQuitButton;
 
+		//These objects control the UI submenus (minimap, stats, inventory and dialog)
         private GameObject Map;
         private GameObject Stats;
         private GameObject Bag;
         private GameObject DialogToggle;
         private GameObject Menu;
         private GameObject GameOver;
+		private GameObject StoryWindow;
 
         private int frames = 0;
 
@@ -48,10 +53,9 @@ namespace Assets.Scripts {
 
             //DontDestroyOnLoad(gameObject);
 
-            Player player = new Player("Player", 3, 4, 5, 6);
+            //Player player = new Player("Player", 3, 4, 5, 6);
 
-            StatKeeper.setStats(10, 3, 4, 5, 6);
-
+			//Finds all of the UI Buttons and GameObjects and a story window button which is at the beginning of scenes
             enterButton = GameObject.Find("ButtonEnter").GetComponent<Button>();
             Bag = GameObject.Find("Bag");                                                                           // Initializes the Inventory
             mapButton = GameObject.Find("ButtonMap").GetComponent<Button>();                                        //   hides/shows map image. Uses a button method instead of ButtonController.
@@ -67,9 +71,17 @@ namespace Assets.Scripts {
             menuPlayButton = GameObject.Find("ShowMenu/ResumeButton").GetComponent<Button>();
             menuQuitButton = GameObject.Find("ShowMenu/QuitButton").GetComponent<Button>();               
             Menu = GameObject.Find("ShowMenu");                                                                 //this object toggles the pause menu
-            //ContinueButton = GameObject.Find("GameOverScreen/ContinueButton").GetComponent<Button>();
             QuitButton = GameObject.Find("GameOverScreen/QuitButton").GetComponent<Button>();
             GameOver = GameObject.Find("GameOverScreen");
+
+
+			if (SceneManager.GetActiveScene ().name.Equals ("Childhood room 1")) {
+				StoryWindow = GameObject.Find ("StoryWindow");
+				hideStoryWindow = GameObject.Find ("StoryWindow/ContinueButton").GetComponent<Button> ();
+
+				hideStoryWindow.onClick.AddListener (() => hideStory ());
+			}
+
 
             Player = GameObject.Find("Player");                                                                  // playable character
 
@@ -89,14 +101,15 @@ namespace Assets.Scripts {
 
             cancelInteracting();
 
-            Debug.Log(player.DisplayStats());
-
         }
 
         
         //Updates stats every 20th frame
         void Update() {
-
+            //DELETE BEFORE RELEASE!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!1
+            if (StatKeeper.getHealth() <= 0) {//888888888888888888888888888888888888888888888888888888888888888888888888888
+                StatKeeper.healPlayer();//!111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111
+            }//!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
             frames++;
             if (frames % 20 == 0) { //If the remainder of the current frame divided by 20 is 0 run the function.
                 UpdateStats();
@@ -115,6 +128,13 @@ namespace Assets.Scripts {
             }
 
         }
+
+		//Hides the story window and continues the game
+		void hideStory() {
+
+			StoryWindow.SetActive (false);
+
+		}
 
         //Continues the game and revives the player
         private void ContinueGame() {

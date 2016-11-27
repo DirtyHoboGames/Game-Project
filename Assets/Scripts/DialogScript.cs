@@ -22,13 +22,30 @@ namespace Assets.Scripts
             //other kid 4
             dialogs.Add("Doth not disturb me");
 
-            //Wench 5-6
+            //Wench 5-7
             dialogs.Add("Wench \r\n   Ah, hath found thee sneaky piece of garbage.");
             dialogs.Add("Wench \r\n   Oh? sweet roses.i'll alloweth t slideth.");
             dialogs.Add("Wench \r\n   Geth lost garbage or thy will faceth certain death!");
 
-            //father(s) 
-            dialogs.Add("");
+            //M' Lady 8
+			dialogs.Add("Holla th're !");
+
+            //guard(s) 9 - infinitii
+            dialogs.Add("Guard: \r\n	I hath used to beest an adventur'r liketh thee, but then i tooketh an arrow to the ham. ");
+            dialogs.Add("Guard: \r\n	Grise aside, citizen");
+        
+            dialogs.Add("Guard: \r\n	Greetings, travell’r");
+        
+            dialogs.Add("Guard: \r\n	Receiveth hath lost, dog. ");
+        
+            dialogs.Add("Guard: \r\n	If 't be true i seeth thee again i shall murd'r thee in thy catch but a wink. ");
+        
+            dialogs.Add("Guard: \r\n	Eat thee dirt");
+        
+            dialogs.Add("Guard: \r\n	A n'rmal day h're isn't t citizen?");
+        
+            dialogs.Add("Guard: \r\n	I did see a frog this m'rning and t wast fabulous. ");
+
 
         }
 
