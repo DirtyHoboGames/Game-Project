@@ -4,6 +4,8 @@ using UnityEngine.UI;
 using Assets.Scripts;
 using UnityEngine.SceneManagement;
 
+//Controls the UI, pause menus and story windows, which will appear at the start of some scenes.
+
 namespace Assets.Scripts {
     public class GameController : MonoBehaviour {
 
@@ -20,7 +22,7 @@ namespace Assets.Scripts {
         private Button enterButton;
 		private Button hideStoryWindow;
 
-		//These objects show when you click "Menu" button
+		//These buttons show when you click "Menu" button
         private Button menuPlayButton;
         private Button menuQuitButton;
 
@@ -51,9 +53,6 @@ namespace Assets.Scripts {
                 Destroy(gameObject);
             }
 
-            //DontDestroyOnLoad(gameObject);
-
-            //Player player = new Player("Player", 3, 4, 5, 6);
 
 			//Finds all of the UI Buttons and GameObjects and a story window button which is at the beginning of scenes
             enterButton = GameObject.Find("ButtonEnter").GetComponent<Button>();
@@ -75,7 +74,7 @@ namespace Assets.Scripts {
             GameOver = GameObject.Find("GameOverScreen");
 
 
-			if (SceneManager.GetActiveScene ().name.Equals ("Childhood room 1")) {
+			if (SceneManager.GetActiveScene ().name.Equals ("Childhood room 1") || SceneManager.GetActiveScene().name.Equals("Dungeon Level")) {
 				StoryWindow = GameObject.Find ("StoryWindow");
 				hideStoryWindow = GameObject.Find ("StoryWindow/ContinueButton").GetComponent<Button> ();
 

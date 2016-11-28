@@ -5,6 +5,10 @@ using System.Collections.Generic;
 using Assets;
 using UnityEngine.SceneManagement;
 
+// When player presses the enter button, it checks if there are any interactable NPC's  near the player
+//If there is, it gets the dialog from the dialog script according to the NPC index 
+//It also includes functionality for finding hidden hobocoins in the walls, crates etc..
+
 namespace Assets.Scripts {
 	
     public class CheckForInteraction : MonoBehaviour {

@@ -1,8 +1,11 @@
 ﻿
 using System.Collections.Generic;
 
-namespace Assets.Scripts
-{
+
+
+//Stores the NPC dialogs which will show up in the dialogbox of the UI. contains methods for getting the dialogs and also getting an empty dialog, which is for resetting the dialogbox
+//if the player presses enter and there are no interactable objects near him
+namespace Assets.Scripts {
     public class DialogScript {
 
         private static List<string> dialogs = new List<string>();
@@ -22,8 +25,10 @@ namespace Assets.Scripts
             //other kid 4
             dialogs.Add("Doth not disturb me");
 
-            //Wench 5-7
-            dialogs.Add("Wench \r\n   Ah, hath found thee sneaky piece of garbage.");
+            //Random creepy kid 5
+            dialogs.Add("Alas off thee dim-witt'd coyote !");
+
+            //Wench 6-7
             dialogs.Add("Wench \r\n   Oh? sweet roses.i'll alloweth t slideth.");
             dialogs.Add("Wench \r\n   Geth lost garbage or thy will faceth certain death!");
 
