@@ -27,7 +27,7 @@ namespace Assets.Scripts {
         }
 
         // Update is called once per frame
-        void Update() {
+        void FixedUpdate() {
 
             if (!upButton.GetPressed() && !downButton.GetPressed() && !leftButton.GetPressed() && !rightButton.GetPressed()) {
                 body.velocity = new Vector2(0, 0);

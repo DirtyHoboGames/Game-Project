@@ -77,5 +77,11 @@ namespace Assets.Scripts {
             return temp;
 
         }
+
+		public static void resetHoboCoin() {
+
+			HoboCoinsCollected = 0;
+
+		}
     }
 }

@@ -15,6 +15,10 @@ namespace Assets.Scripts {
 
         void Start() {
 
+			Destroy (GameObject.Find("GameController"));
+
+			StatKeeper.resetHoboCoin ();
+
             PlayButton = GameObject.Find("Play").GetComponent<Button>(); 
             AboutButton = GameObject.Find("About").GetComponent<Button>();
             QuitButton = GameObject.Find("Quit").GetComponent<Button>();

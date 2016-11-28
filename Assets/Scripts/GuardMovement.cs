@@ -28,7 +28,7 @@ public class GuardMovement : MonoBehaviour {
             animator.SetBool("GHorizAnim", true);
 
         }
-        /*if (range >1) {
+        /*if () {
             transform.position = Vector2.MoveTowards(transform.position, target2.position, speed * Time.deltaTime);
         } */
     }
