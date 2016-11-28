@@ -91,7 +91,7 @@ namespace Assets.Scripts {
             enterButton.onClick.AddListener(() => searchInteraction());
             menuButton.onClick.AddListener(() => toggleMenu());
             menuPlayButton.onClick.AddListener(() => resumeGame());
-            menuQuitButton.onClick.AddListener(() => SceneManager.LoadScene(1));                //When you click "Quit to menu" button on the pause menu it returns you to the Title Menu
+			menuQuitButton.onClick.AddListener(() => quitGame());                //When you click "Quit to menu" button on the pause menu it returns you to the Title Menu
 
             //ContinueButton.onClick.AddListener(() => ContinueGame());                //Continues game from Wench's House upstairs
             QuitButton.onClick.AddListener(() => quitToMainMenu());                    //Same thing here as in the pause menu^
@@ -106,10 +106,12 @@ namespace Assets.Scripts {
         
         //Updates stats every 20th frame
         void Update() {
+			
             //DELETE BEFORE RELEASE!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!1
             if (StatKeeper.getHealth() <= 0) {//888888888888888888888888888888888888888888888888888888888888888888888888888
                 StatKeeper.healPlayer();//!111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111
             }//!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
             frames++;
             if (frames % 20 == 0) { //If the remainder of the current frame divided by 20 is 0 run the function.
                 UpdateStats();
@@ -128,6 +130,14 @@ namespace Assets.Scripts {
             }
 
         }
+
+		//Unfreezes the time and returns the player to main menu
+		void quitGame() {
+
+			Time.timeScale = 1f;
+			SceneManager.LoadScene (1);
+
+		}
 
 		//Hides the story window and continues the game
 		void hideStory() {
