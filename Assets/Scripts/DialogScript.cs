@@ -40,7 +40,7 @@ namespace Assets.Scripts
         
             dialogs.Add("Guard: \r\n	If 't be true i seeth thee again i shall murd'r thee in thy catch but a wink. ");
         
-            dialogs.Add("Guard: \r\n	Eat thee dirt");
+            dialogs.Add("Guard: \r\n	I see thee!! *Hits you*");
         
             dialogs.Add("Guard: \r\n	A n'rmal day h're isn't t citizen?");
         
