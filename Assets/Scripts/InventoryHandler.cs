@@ -18,7 +18,7 @@ public class InventoryHandler : MonoBehaviour {
         private GameObject Potion;
         private GameObject Rose;
 
-
+        
         // Use this for initialization
         void Start () {
 
@@ -38,6 +38,12 @@ public class InventoryHandler : MonoBehaviour {
 
 
 
+        }
+
+        void Update() {
+            if (roseUsed == true) {
+                useRose();
+            }
         }
 
         //Checks if the potions & rose has been already used
@@ -89,7 +95,7 @@ public class InventoryHandler : MonoBehaviour {
         }
 
         //Uses the rose, if you really want to do it
-		public void useRose() {
+        public void useRose() {
 
             roseUsed = true;
             Debug.Log("Rose used... U gonna regret it m8");
@@ -101,6 +107,9 @@ public class InventoryHandler : MonoBehaviour {
 
             return potionAmount;
 
+        }
+        public static void GiveRose() {
+            roseUsed = true;
         }
     }
 }
