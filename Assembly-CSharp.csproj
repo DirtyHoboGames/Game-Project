@@ -58,6 +58,8 @@
      <Compile Include="Assets\Scripts\DontDestroy.cs" />
      <Compile Include="Assets\Scripts\Fading.cs" />
      <Compile Include="Assets\Scripts\GameController.cs" />
+     <Compile Include="Assets\Scripts\GuardLineOfSight.cs" />
+     <Compile Include="Assets\Scripts\GuardMovement.cs" />
      <Compile Include="Assets\Scripts\InventoryHandler.cs" />
      <Compile Include="Assets\Scripts\Player.cs" />
      <Compile Include="Assets\Scripts\PlayerMovement.cs" />
@@ -65,6 +67,7 @@
      <Compile Include="Assets\Scripts\RegularButtons.cs" />
      <Compile Include="Assets\Scripts\StatKeeper.cs" />
      <Compile Include="Assets\Scripts\TitleMenuController.cs" />
+     <Compile Include="Assets\Scripts\WenchLineofSight.cs" />
      <Compile Include="Assets\Scripts\goDownstairs.cs" />
      <Compile Include="Assets\Scripts\npcDialogs.cs" />
      <None Include="Assets\RPG_Pack\Contact_Info.txt" />

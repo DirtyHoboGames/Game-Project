@@ -14,10 +14,10 @@ namespace Assets.Scripts
             //M' Lady 0-2
             dialogs.Add("M' Lady \r\n   I haven't seen thee hither ere. What is thy nameth?");
             dialogs.Add("M' Lady \r\n   Typeth thy nameth");
-            dialogs.Add("M' Lady \r\n   Nice to meeteth thee x. I am new at this nurs'ry and t is at each moment nice to meeteth new people. ");
+            dialogs.Add("M' Lady \r\n   Nice to meeteth thee !. I am new at this nurs'ry and t is at each moment nice to meeteth new people. ");
             
-            //rival 3
-            dialogs.Add("At which hour thee heareth the bell, cometh apace. The bitter cold drizzle shall halt the bond driveth.");
+            //Kindergarten nurse 3
+			dialogs.Add("Well seeth again tom'rrow dram one ! Hie to thy fath'r anon.");
 
             //other kid 4
             dialogs.Add("Doth not disturb me");
@@ -49,6 +49,7 @@ namespace Assets.Scripts
 
         }
 
+		//returns the correct dialog based on NPC's name, which acts a index for the "dialogs" list
         public static string getDialog (int lel) {
 
             if(dialogs.Count > lel) {
@@ -60,5 +61,14 @@ namespace Assets.Scripts
 
         }
     }
-}
+		//returns empty dialog to clear the dialog box when you aren't near anything/anyone
+		public static string getNullDialog() {
+
+			return "";
+
+		}
+
+
+
+	}
 }

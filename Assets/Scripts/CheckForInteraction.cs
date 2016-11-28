@@ -69,7 +69,7 @@ namespace Assets.Scripts {
 
         }
 
-         void OnTriggerEnter2D(Collider2D colli) {
+		void OnTriggerEnter2D(Collider2D colli) {
 
 			if (colli.CompareTag ("NPC")) {
 
@@ -110,6 +110,10 @@ namespace Assets.Scripts {
 					
 					BloodyKnightToggle.SetActive (true);
 				}
+
+			} else {
+
+				dialog.text = DialogScript.getNullDialog ();
 
 			}
 				
