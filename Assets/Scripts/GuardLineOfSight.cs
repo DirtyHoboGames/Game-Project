@@ -9,7 +9,7 @@ using UnityEngine.SceneManagement;
 public class GuardLineOfSight : MonoBehaviour { //Script for guards to detect player, hit the player and teleport the player to the beginning 
     private Text dialog;                        //of the level.
     int scene = SceneManager.GetActiveScene().buildIndex;
-
+    private bool spotted;
     void Start() {
         
         DialogScript.DialogInit();
@@ -23,9 +23,16 @@ public class GuardLineOfSight : MonoBehaviour { //Script for guards to detect pl
             
             StatKeeper.receiveDamage(4);
             dialog.text = DialogScript.getDialog(14);
-            Invoke("CheckStatus", 2);
+            spotted = true;
+            //Invoke("CheckStatus", 1);
         }
     }
+    void Update() {
+        if (spotted == true) {
+            CheckStatus();
+        }
+    }
+
     void CheckStatus() { 
         if (StatKeeper.getHealth() >=5) {
             SceneManager.LoadScene(5);
