@@ -7,11 +7,16 @@ using Assets.Scripts;
 using UnityEngine.SceneManagement;
 
 public class GuardLineOfSight : MonoBehaviour { //Script for guards to detect player, hit the player and teleport the player to the beginning 
-    private Text dialog;                        //of the level.
-    int scene = SceneManager.GetActiveScene().buildIndex;
-    private bool spotted;
+    
+	private Text dialog;                        //of the level.
+	private bool spotted;
+	private Vector3 entrance = new Vector3(-16.10f, -5.782f, -0.355f);
+	private GameObject player;
+
     void Start() {
-        
+
+		player = GameObject.Find ("Player");
+
         DialogScript.DialogInit();
 
         dialog = GameObject.Find("ShowDialog/DialogBox").GetComponent<Text>();
@@ -24,18 +29,27 @@ public class GuardLineOfSight : MonoBehaviour { //Script for guards to detect pl
             StatKeeper.receiveDamage(4);
             dialog.text = DialogScript.getDialog(14);
             spotted = true;
-            //Invoke("CheckStatus", 1);
+
         }
     }
     void Update() {
         if (spotted == true) {
+			
             CheckStatus();
+
+			player.transform.position = entrance;
+
+			spotted = false;
+
+
         }
     }
 
     void CheckStatus() { 
         if (StatKeeper.getHealth() >=5) {
-            SceneManager.LoadScene(5);
+            
+			StatKeeper.receiveDamage (4);
+			player.transform.TransformPoint (entrance);
             
         }
     }

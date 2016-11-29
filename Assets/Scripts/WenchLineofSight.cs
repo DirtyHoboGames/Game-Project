@@ -11,6 +11,8 @@ public class WenchLineofSight : MonoBehaviour {
     private GameObject WenchStoryWindow;
     private Button YesButton;
     private Button NoButton;
+	private bool wenchFlipped = true;
+	private bool coRoutineStarted = true;
     
 
     void Start() {
@@ -25,13 +27,44 @@ public class WenchLineofSight : MonoBehaviour {
         dialog = GameObject.Find("ShowDialog/DialogBox").GetComponent<Text>();
         WenchStoryWindow.SetActive(false);
 
+
     }
+
+	void Update() {
+
+		if(coRoutineStarted) {
+
+			coRoutineStarted = false;
+			
+		StartCoroutine (flipWench ());
+
+
+		}
+	}
+
+
     void YesButtonClicked() {
         hideStory();
         InventoryHandler.GiveRose();
         
         
     }
+
+	IEnumerator flipWench() {
+
+		wenchFlip (1);
+
+		yield return new WaitForSeconds (3);
+
+		wenchFlip (-1);
+
+		yield return new WaitForSeconds (3);
+
+		coRoutineStarted = true;
+
+	}
+
+
     void NoButtonClicked() {
         hideStory();
         StatKeeper.receiveDamage(6);
@@ -50,6 +83,10 @@ public class WenchLineofSight : MonoBehaviour {
 
     }
 
+	/// <summary>
+	/// Raises the trigger enter 2d when the player hits the trigger and activates the story window.
+	/// </summary>
+	/// <param name="coll">Coll.</param>
     void OnTriggerEnter2D(Collider2D coll) {
         if (coll.CompareTag("Playa")) { //if player hits the collider, time freezes and dialogue follows.
             //Time.timeScale = 0f;
@@ -57,4 +94,12 @@ public class WenchLineofSight : MonoBehaviour {
             Debug.Log("lel");
         }
     }
+
+	//flips the wench and the collider
+	private void wenchFlip(int direction) {
+		if (direction > 0 && !wenchFlipped || direction < 0 && wenchFlipped) {
+			wenchFlipped = !wenchFlipped;
+			transform.localScale = new Vector3(transform.localScale.x * -1, transform.localScale.y, transform.localScale.z);
+		}
+	}
 }
