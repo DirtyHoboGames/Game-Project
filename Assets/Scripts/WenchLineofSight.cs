@@ -14,56 +14,34 @@ public class WenchLineofSight : MonoBehaviour {
 	private bool wenchFlipped = true;
 	private bool coRoutineStarted = true;
     
-
     void Start() {
         WenchStoryWindow = GameObject.Find("WenchStoryWindow");
         YesButton = GameObject.Find("WenchStoryWindow/YesButton").GetComponent<Button>();
         NoButton = GameObject.Find("WenchStoryWindow/NoButton").GetComponent<Button>();
-
         YesButton.onClick.AddListener(() => YesButtonClicked());
         NoButton.onClick.AddListener(() => NoButtonClicked());
-
         DialogScript.DialogInit();
         dialog = GameObject.Find("ShowDialog/DialogBox").GetComponent<Text>();
         WenchStoryWindow.SetActive(false);
-
-
     }
-
-	void Update() {
-
-		if(coRoutineStarted) {
-
-			coRoutineStarted = false;
-			
-		StartCoroutine (flipWench ());
-
-
-		}
+    void Update() {
+        if(coRoutineStarted) {
+            coRoutineStarted = false;
+			StartCoroutine (flipWench ());
+        }
 	}
-
-
     void YesButtonClicked() {
         hideStory();
         InventoryHandler.GiveRose();
-        
-        
     }
-
-	IEnumerator flipWench() {
+    IEnumerator flipWench() {
 
 		wenchFlip (1);
-
-		yield return new WaitForSeconds (3);
-
-		wenchFlip (-1);
-
-		yield return new WaitForSeconds (3);
-
-		coRoutineStarted = true;
-
-	}
-
+        yield return new WaitForSeconds (3);
+        wenchFlip (-1);
+        yield return new WaitForSeconds (3);
+        coRoutineStarted = true;
+    }
 
     void NoButtonClicked() {
         hideStory();
@@ -73,14 +51,10 @@ public class WenchLineofSight : MonoBehaviour {
 
     void showStory() {
         WenchStoryWindow.SetActive(true);
-
     }
 
-
     void hideStory() {
-
         WenchStoryWindow.SetActive(false);
-
     }
 
 	/// <summary>
@@ -94,8 +68,7 @@ public class WenchLineofSight : MonoBehaviour {
             Debug.Log("lel");
         }
     }
-
-	//flips the wench and the collider
+    //flips the wench and the collider
 	private void wenchFlip(int direction) {
 		if (direction > 0 && !wenchFlipped || direction < 0 && wenchFlipped) {
 			wenchFlipped = !wenchFlipped;

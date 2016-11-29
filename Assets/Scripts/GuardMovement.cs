@@ -2,21 +2,19 @@
 using System.Collections;
 
 public class GuardMovement : MonoBehaviour {
-
     public float speed;
     private Animator animator;
     private bool flipGuard = true;
     private Rigidbody2D guardBody;
 
-
-    void Start() {
+    void Start() {                       //adding components and setting the guard animation true ( guards never stop ).
         animator = GetComponent<Animator>();
         guardBody = GetComponent<Rigidbody2D>();
         guardBody.velocity = new Vector2(speed,0);
         animator.SetBool("GHorizAnim", true);
     }
 
-    void OnTriggerEnter2D(Collider2D colli) {
+    void OnTriggerEnter2D(Collider2D colli) {    //guards cycle through waypoints.
         if (colli.gameObject.tag=="Waypoint1") {
             guardBody.velocity = new Vector2(speed,0);
             GuardFlip(1);
@@ -24,11 +22,9 @@ public class GuardMovement : MonoBehaviour {
         if (colli.gameObject.tag == "Waypoint2") {
             guardBody.velocity = new Vector2(-speed, 0);
             GuardFlip(-1);
-            
         }
     }
-
-    void Update() {
+    void Update() { //stops guards escaping to the void.
         transform.rotation = Quaternion.identity;
     }
     private void GuardFlip(int direction) { //Flips the guards animation when going left. 
@@ -38,13 +34,3 @@ public class GuardMovement : MonoBehaviour {
         }
     }
 }
-
-
-
-
-
-
-/* if (range2 <= maxDistance && range2 >= 0.9f) {
-            transform.position = Vector2.MoveTowards(transform.position, target2.position, speed * Time.deltaTime);
-            //animator.SetBool("GHorizAnim", true);
-        }*/
