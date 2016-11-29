@@ -19,6 +19,7 @@ public class GuardLineOfSight : MonoBehaviour { //Script for guards to detect pl
         DialogScript.DialogInit();
         dialog = GameObject.Find("ShowDialog/DialogBox").GetComponent<Text>();
     }
+
     void OnTriggerEnter2D(Collider2D coll) { //guard collider checks for player and deals damage, says some stuff, invokes checkstatus method.
         if (coll.CompareTag("Playa")) {
             StatKeeper.receiveDamage(4);
@@ -26,6 +27,7 @@ public class GuardLineOfSight : MonoBehaviour { //Script for guards to detect pl
             spotted = true;
         }
     }
+
     void Update() {          //looks if guards spotted player every frame and teleports them in to the beginning of the level.
         if (spotted == true) {
 			CheckStatus();
@@ -33,10 +35,12 @@ public class GuardLineOfSight : MonoBehaviour { //Script for guards to detect pl
             spotted = false;
         }
     }
+
     void CheckStatus() {    //method for damaging player and teleport.
         if (StatKeeper.getHealth() >=5) {
             StatKeeper.receiveDamage (4);
-			player.transform.TransformPoint (entrance);
+
+
         }
     }
 }

@@ -13,17 +13,27 @@ public class WenchLineofSight : MonoBehaviour {
     private Button NoButton;
 	private bool wenchFlipped = true;
 	private bool coRoutineStarted = true;
+
+	//This is the players position when the scene first loads
+	private Vector2 entrance = new Vector2(-36.205f, -8.083f);
+
+	//This represents the player
+	private GameObject player;
     
     void Start() {
+		
         WenchStoryWindow = GameObject.Find("WenchStoryWindow");
         YesButton = GameObject.Find("WenchStoryWindow/YesButton").GetComponent<Button>();
         NoButton = GameObject.Find("WenchStoryWindow/NoButton").GetComponent<Button>();
         YesButton.onClick.AddListener(() => YesButtonClicked());
         NoButton.onClick.AddListener(() => NoButtonClicked());
-        DialogScript.DialogInit();
-        dialog = GameObject.Find("ShowDialog/DialogBox").GetComponent<Text>();
         WenchStoryWindow.SetActive(false);
+
+		//Finds the player object
+		player = GameObject.Find ("Player");
+
     }
+
     void Update() {
         if(coRoutineStarted) {
             coRoutineStarted = false;
@@ -46,7 +56,9 @@ public class WenchLineofSight : MonoBehaviour {
     void NoButtonClicked() {
         hideStory();
         StatKeeper.receiveDamage(6);
-        SceneManager.LoadScene(4);
+        
+		player.transform.position = entrance;
+
     }
 
     void showStory() {
@@ -63,7 +75,7 @@ public class WenchLineofSight : MonoBehaviour {
 	/// <param name="coll">Coll.</param>
     void OnTriggerEnter2D(Collider2D coll) {
         if (coll.CompareTag("Playa")) { //if player hits the collider, time freezes and dialogue follows.
-            //Time.timeScale = 0f;
+            
             showStory();
             Debug.Log("lel");
         }

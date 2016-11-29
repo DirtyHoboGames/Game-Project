@@ -13,10 +13,7 @@ namespace Assets.Scripts {
         void Start() {
 
             Dialog = GameObject.Find("ShowDialog");
-            Continue = GameObject.Find("DialogBox/ExitDialogButton").GetComponent<Button>();
             DialogBox = GameObject.Find("DialogBox").GetComponent<Text>();
-
-            Continue.onClick.AddListener(() => ExitDialog());
 
         }
 

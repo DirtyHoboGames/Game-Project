@@ -74,7 +74,7 @@ namespace Assets.Scripts {
             GameOver = GameObject.Find("GameOverScreen");
 
 
-			if (SceneManager.GetActiveScene ().name.Equals ("Childhood room 1") || SceneManager.GetActiveScene().name.Equals("Dungeon Level")) {
+			if (SceneManager.GetActiveScene ().name.Equals ("Childhood room 1") || SceneManager.GetActiveScene().name.Equals("Sleeping Chambers") || SceneManager.GetActiveScene().name.Equals("Dungeon Level")) {
 				StoryWindow = GameObject.Find ("StoryWindow");
 				hideStoryWindow = GameObject.Find ("StoryWindow/ContinueButton").GetComponent<Button> ();
 
