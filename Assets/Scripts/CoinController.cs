@@ -5,11 +5,16 @@ using Assets.Scripts;
 namespace Assets.Scripts { 
     class CoinController : MonoBehaviour {
 
+
         //When Player touches the HoboCoin, it disappears and calls a method to add one HoboCoin into the collectables
 	    void OnTriggerEnter2D(Collider2D colli) {
+			
+			if (colli.CompareTag ("Playa")) {
+				
+				DestroyObject (this.gameObject);
 
-            DestroyObject(this.gameObject);
-            StatKeeper.collectHoboCoin();
+				StatKeeper.collectHoboCoin ();
+			}
         }
 	}
 }
