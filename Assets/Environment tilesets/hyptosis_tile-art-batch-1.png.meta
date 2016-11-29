@@ -1,6 +1,6 @@
 fileFormatVersion: 2
 guid: ab2f6e7e2d6317341ad8a8db23dff5c3
-timeCreated: 1480264046
+timeCreated: 1480453884
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
@@ -212,14 +212,14 @@ TextureImporter:
     21300410: hyptosis_tile-art-batch-1_205
     21300412: hyptosis_tile-art-batch-1_206
     21300414: hyptosis_tile-art-batch-1_207
-    21300416: hyptosis_tile-art-batch-1_208
-    21300418: hyptosis_tile-art-batch-1_209
-    21300420: hyptosis_tile-art-batch-1_210
-    21300422: hyptosis_tile-art-batch-1_211
-    21300424: hyptosis_tile-art-batch-1_212
-    21300426: hyptosis_tile-art-batch-1_213
-    21300428: hyptosis_tile-art-batch-1_214
-    21300430: hyptosis_tile-art-batch-1_215
+    21300416: 1i
+    21300418: 1h
+    21300420: 1g
+    21300422: 1f
+    21300424: 1e
+    21300426: 1d
+    21300428: 1ab
+    21300430: 1ac
     21300432: hyptosis_tile-art-batch-1_216
     21300434: hyptosis_tile-art-batch-1_217
     21300436: hyptosis_tile-art-batch-1_218
@@ -242,14 +242,14 @@ TextureImporter:
     21300470: hyptosis_tile-art-batch-1_235
     21300472: hyptosis_tile-art-batch-1_236
     21300474: hyptosis_tile-art-batch-1_237
-    21300476: hyptosis_tile-art-batch-1_238
-    21300478: hyptosis_tile-art-batch-1_239
+    21300476: 1ad
+    21300478: 1totem
     21300480: hyptosis_tile-art-batch-1_240
     21300482: hyptosis_tile-art-batch-1_241
     21300484: hyptosis_tile-art-batch-1_242
-    21300486: hyptosis_tile-art-batch-1_243
-    21300488: hyptosis_tile-art-batch-1_244
-    21300490: hyptosis_tile-art-batch-1_245
+    21300486: 1c
+    21300488: 1a
+    21300490: 1b
     21300492: hyptosis_tile-art-batch-1_246
     21300494: hyptosis_tile-art-batch-1_247
     21300496: hyptosis_tile-art-batch-1_248
@@ -275,7 +275,7 @@ TextureImporter:
     21300536: hyptosis_tile-art-batch-1_268
     21300538: hyptosis_tile-art-batch-1_269
     21300540: hyptosis_tile-art-batch-1_270
-    21300542: hyptosis_tile-art-batch-1_271
+    21300542: 1ruukkuja
     21300544: hyptosis_tile-art-batch-1_272
     21300546: hyptosis_tile-art-batch-1_273
     21300548: hyptosis_tile-art-batch-1_274
@@ -327,9 +327,9 @@ TextureImporter:
     21300640: hyptosis_tile-art-batch-1_320
     21300642: hyptosis_tile-art-batch-1_321
     21300644: hyptosis_tile-art-batch-1_322
-    21300646: hyptosis_tile-art-batch-1_323
+    21300646: 1isoruukku
     21300648: hyptosis_tile-art-batch-1_324
-    21300650: hyptosis_tile-art-batch-1_325
+    21300650: 1ruuk
     21300652: hyptosis_tile-art-batch-1_326
     21300654: hyptosis_tile-art-batch-1_327
     21300656: hyptosis_tile-art-batch-1_328
@@ -3587,7 +3587,7 @@ TextureImporter:
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: hyptosis_tile-art-batch-1_208
+      name: 1i
       rect:
         serializedVersion: 2
         x: 0
@@ -3600,7 +3600,7 @@ TextureImporter:
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: hyptosis_tile-art-batch-1_209
+      name: 1h
       rect:
         serializedVersion: 2
         x: 32
@@ -3613,7 +3613,7 @@ TextureImporter:
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: hyptosis_tile-art-batch-1_210
+      name: 1g
       rect:
         serializedVersion: 2
         x: 64
@@ -3626,7 +3626,7 @@ TextureImporter:
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: hyptosis_tile-art-batch-1_211
+      name: 1f
       rect:
         serializedVersion: 2
         x: 96
@@ -3639,7 +3639,7 @@ TextureImporter:
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: hyptosis_tile-art-batch-1_212
+      name: 1e
       rect:
         serializedVersion: 2
         x: 128
@@ -3652,7 +3652,7 @@ TextureImporter:
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: hyptosis_tile-art-batch-1_213
+      name: 1d
       rect:
         serializedVersion: 2
         x: 160
@@ -3665,7 +3665,7 @@ TextureImporter:
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: hyptosis_tile-art-batch-1_214
+      name: 1ab
       rect:
         serializedVersion: 2
         x: 192
@@ -3678,7 +3678,7 @@ TextureImporter:
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: hyptosis_tile-art-batch-1_215
+      name: 1ac
       rect:
         serializedVersion: 2
         x: 224
@@ -3977,7 +3977,7 @@ TextureImporter:
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: hyptosis_tile-art-batch-1_238
+      name: 1ad
       rect:
         serializedVersion: 2
         x: 0
@@ -3990,13 +3990,13 @@ TextureImporter:
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: hyptosis_tile-art-batch-1_239
+      name: 1totem
       rect:
         serializedVersion: 2
         x: 32
-        y: 672
+        y: 576
         width: 32
-        height: 32
+        height: 114
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -4042,7 +4042,7 @@ TextureImporter:
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: hyptosis_tile-art-batch-1_243
+      name: 1c
       rect:
         serializedVersion: 2
         x: 160
@@ -4055,7 +4055,7 @@ TextureImporter:
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: hyptosis_tile-art-batch-1_244
+      name: 1a
       rect:
         serializedVersion: 2
         x: 192
@@ -4068,7 +4068,7 @@ TextureImporter:
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: hyptosis_tile-art-batch-1_245
+      name: 1b
       rect:
         serializedVersion: 2
         x: 224
@@ -4406,7 +4406,7 @@ TextureImporter:
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: hyptosis_tile-art-batch-1_271
+      name: 1ruukkuja
       rect:
         serializedVersion: 2
         x: 96
@@ -5082,7 +5082,7 @@ TextureImporter:
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: hyptosis_tile-art-batch-1_323
+      name: 1isoruukku
       rect:
         serializedVersion: 2
         x: 0
@@ -5108,7 +5108,7 @@ TextureImporter:
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: hyptosis_tile-art-batch-1_325
+      name: 1ruuk
       rect:
         serializedVersion: 2
         x: 64
