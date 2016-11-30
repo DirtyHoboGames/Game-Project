@@ -9,6 +9,7 @@ using System.Collections;
 namespace Assets.Scripts {
     public static class StatKeeper {
 
+		static string selectedFather = "";
 
         static int Health;
         static int Charisma;
@@ -91,6 +92,7 @@ namespace Assets.Scripts {
         public static int getHealth() {
 
             return Health;
+
         }
 
 		/// <summary>
@@ -147,6 +149,18 @@ namespace Assets.Scripts {
 
 			return Luck;
 
+		}
+
+		public static string getFather() {
+		
+			return selectedFather;
+		
+		}
+
+		public static void SelectFather(string father) {
+		
+			selectedFather = father;
+		
 		}
 
     }

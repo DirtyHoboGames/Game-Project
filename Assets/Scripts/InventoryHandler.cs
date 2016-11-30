@@ -108,8 +108,15 @@ public class InventoryHandler : MonoBehaviour {
             return potionAmount;
 
         }
+
         public static void GiveRose() {
             roseUsed = true;
         }
+
+		public static bool roseAlreadyUsed() {
+		
+			return roseUsed;
+		
+		}
     }
 }
