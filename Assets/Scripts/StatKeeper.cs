@@ -153,7 +153,10 @@ namespace Assets.Scripts {
 
 		public static string getFather() {
 		
+			Debug.Log ("Father is " + selectedFather);
+
 			return selectedFather;
+
 		
 		}
 
@@ -161,6 +164,8 @@ namespace Assets.Scripts {
 		
 			selectedFather = father;
 		
+			Debug.Log ("Father selected: " + father);
+
 		}
 
     }

@@ -8,6 +8,7 @@ using UnityEngine.SceneManagement;
 // When player presses the enter button, it checks if there are any interactable NPC's  near the player
 //If there is, it gets the dialog from the dialog script according to the NPC index 
 //It also includes functionality for finding hidden hobocoins in the walls, crates etc..
+//Also controls the childhood scene's father selection.
 
 namespace Assets.Scripts {
 	
@@ -32,25 +33,9 @@ namespace Assets.Scripts {
 		private Button BloodyYes;
 		private Button BloodyNo;
 
-        /*
-        public AudioClip grunt1;
-        public AudioClip grunt2;
-        public AudioClip grunt3;
-
-        private AudioClip[] grunts;
-        */
-
         public static List<string> dialogs = new List<string>();
 
 		void Awake() {
-
-            /*
-            grunts = new AudioClip[3];
-
-            grunts[0] = grunt1;
-            grunts[1] = grunt2;
-            grunts[2] = grunt3;
-            */
 
             DialogScript.DialogInit();
 
@@ -93,18 +78,12 @@ namespace Assets.Scripts {
 
 			if (colli.CompareTag ("NPC")) {
 
-                //SoundManager.instance.RandomizeSfx(grunts);
-
-                //SoundManager.instance.musicSource.PlayOneShot(clips[randomIndex], randomPitch);
-
-                dialog.text = DialogScript.getDialog (int.Parse (colli.gameObject.name));
+				dialog.text = DialogScript.getDialog (int.Parse (colli.gameObject.name));
 
 				/*}else if (colli.CompareTag("Wench")) {
                 dialog.text = DialogScript.getDialog(int.Parse(colli.gameObject.name));
                 */
 			} else if (colli.CompareTag ("HiddenHoboCoin") == true) {
-
-                //SoundManager.instance.PlaySingle(coin);
 
 				Debug.Log ("Oh look, a HoboCoin !");
 
@@ -167,25 +146,31 @@ namespace Assets.Scripts {
 
 				StatKeeper.setStats (10, 4, 7, 5, 4);
 
-				int temp = SceneManager.GetActiveScene ().buildIndex; 
+				StatKeeper.SelectFather ("Charisma");
 
-				SceneManager.LoadScene (temp + 1);
+				int temp = SceneManager.GetActiveScene().buildIndex; 
+
+				SceneManager.LoadScene(temp + 1);
 
 			} else if (father.Equals ("Blue")) {
 			
 				StatKeeper.setStats (10, 4, 4, 5, 7);
 
-				int temp = SceneManager.GetActiveScene ().buildIndex; 
+				StatKeeper.SelectFather ("Luck");
 
-				SceneManager.LoadScene (temp + 1);
+				int temp = SceneManager.GetActiveScene().buildIndex; 
+
+				SceneManager.LoadScene(temp + 1);
 			
 			} else if (father.Equals ("Bloody")) {
 
 				StatKeeper.setStats (10, 7, 4, 5, 4);
 
-				int temp = SceneManager.GetActiveScene ().buildIndex; 
+				StatKeeper.SelectFather ("Strength");
 
-				SceneManager.LoadScene (temp + 1);
+				int temp = SceneManager.GetActiveScene().buildIndex; 
+
+				SceneManager.LoadScene(temp + 1);
 
 				}
 			}
