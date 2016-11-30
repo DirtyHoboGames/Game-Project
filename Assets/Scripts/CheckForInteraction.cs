@@ -32,9 +32,25 @@ namespace Assets.Scripts {
 		private Button BloodyYes;
 		private Button BloodyNo;
 
+        /*
+        public AudioClip grunt1;
+        public AudioClip grunt2;
+        public AudioClip grunt3;
+
+        private AudioClip[] grunts;
+        */
+
         public static List<string> dialogs = new List<string>();
 
 		void Awake() {
+
+            /*
+            grunts = new AudioClip[3];
+
+            grunts[0] = grunt1;
+            grunts[1] = grunt2;
+            grunts[2] = grunt3;
+            */
 
             DialogScript.DialogInit();
 
@@ -77,12 +93,18 @@ namespace Assets.Scripts {
 
 			if (colli.CompareTag ("NPC")) {
 
-				dialog.text = DialogScript.getDialog (int.Parse (colli.gameObject.name));
+                //SoundManager.instance.RandomizeSfx(grunts);
+
+                //SoundManager.instance.musicSource.PlayOneShot(clips[randomIndex], randomPitch);
+
+                dialog.text = DialogScript.getDialog (int.Parse (colli.gameObject.name));
 
 				/*}else if (colli.CompareTag("Wench")) {
                 dialog.text = DialogScript.getDialog(int.Parse(colli.gameObject.name));
                 */
 			} else if (colli.CompareTag ("HiddenHoboCoin") == true) {
+
+                //SoundManager.instance.PlaySingle(coin);
 
 				Debug.Log ("Oh look, a HoboCoin !");
 
